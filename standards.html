@@ -1,0 +1,3587 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Library standards referenced — datascalehr review</title>
+  <meta name="description" content="Every standards-library object file referenced in the datascalehr homepage rebuild, with why it applied and its full text.">
+  <meta name="robots" content="noindex">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;700;800&display=swap">
+  <style>
+:root{color-scheme:light dark;--brand:#00a2ff;--brand-ink:#0077cc;--bg:#0b0e14;--panel:#11151f;
+--card:#161c28;--line:#243040;--ink:#eaf0f7;--muted:#9aa7b8;--pos:#1ec98b;--radius:16px;
+--font:"Lexend Deca",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;--maxw:1000px}
+*,*::before,*::after{box-sizing:border-box}
+body{margin:0;font-family:var(--font);background:var(--bg);color:var(--ink);line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:var(--brand)}
+h1{font-size:clamp(1.9rem,4vw,2.9rem);letter-spacing:-.02em;margin:0 0 .4rem}
+h2{font-size:1.4rem;letter-spacing:-.01em}
+:focus-visible{outline:3px solid var(--brand);outline-offset:2px;border-radius:4px}
+.wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+.muted{color:var(--muted)}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:700;color:var(--brand)}
+/* Header — identical to the review hub's header */
+header.hub{position:sticky;top:0;z-index:20;background:rgba(11,14,20,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+.bar{display:flex;align-items:center;gap:1rem;min-height:64px}
+.logo{display:inline-flex;align-items:center;gap:.5rem;font-weight:800;font-size:1.15rem;color:#fff;text-decoration:none}
+.logo svg{width:24px;height:24px}.logo .hr{color:var(--brand)}
+.tag{margin-left:.4rem;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7f8da0;border:1px solid var(--line);padding:.25rem .55rem;border-radius:999px}
+.bar .spacer{margin-left:auto}
+.bar a.src{color:#9aa7b8;text-decoration:none;font-size:.85rem;font-weight:600}
+.bar a.src:hover{color:#fff}
+.intro{padding:clamp(2rem,5vw,3.5rem) 0 1rem}
+.toc{display:flex;flex-wrap:wrap;gap:.5rem;margin:1.4rem 0 0}
+.toc a{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.4rem .8rem;font-size:.8rem;font-weight:600;color:var(--muted);text-decoration:none;white-space:nowrap}
+.toc a:hover{border-color:var(--brand);color:#fff}
+.toc a b{color:var(--brand)}
+section.grp{padding:1.6rem 0;scroll-margin-top:80px}
+.stdgroup>h2{margin:0 0 .8rem;padding-bottom:.5rem;border-bottom:1px solid var(--line);color:#fff}
+details.std{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:.6rem;overflow:hidden}
+details.std[open]{border-color:var(--brand-ink)}
+details.std>summary{list-style:none;cursor:pointer;padding:.85rem 1rem;display:grid;gap:.3rem}
+details.std>summary::-webkit-details-marker{display:none}
+details.std>summary::before{content:"\25B8 ";color:var(--brand)}
+details.std[open]>summary::before{content:"\25BE "}
+.stdpath{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.82rem;color:var(--brand);font-weight:600;word-break:break-all}
+.stdwhy{font-size:.86rem;color:#c8d2df;line-height:1.5}
+.stdwhy code{background:#0b1119;border:1px solid var(--line);border-radius:5px;padding:.02rem .3rem;font-size:.85em}
+pre.stdtext{margin:0;padding:1rem 1.1rem;border-top:1px solid var(--line);background:#0a0e15;color:#c8d2df;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.78rem;line-height:1.55;white-space:pre-wrap;word-wrap:break-word;overflow-x:auto;max-height:520px;overflow-y:auto}
+.tools{display:flex;gap:.6rem;margin:1.2rem 0}
+.tools button{appearance:none;background:var(--card);border:1px solid var(--line);border-radius:999px;color:var(--ink);font:inherit;font-weight:600;font-size:.82rem;padding:.45rem .9rem;cursor:pointer}
+.tools button:hover{border-color:var(--brand);color:#fff}
+footer.pg{border-top:1px solid var(--line);padding-block:2rem;color:var(--muted);font-size:.85rem;margin-top:2rem}
+</style>
+</head>
+<body>
+  <header class="hub">
+    <div class="wrap bar">
+      <a class="logo" href="index.html"><svg viewBox="0 0 32 32" aria-hidden="true"><rect x="13" y="4" width="6" height="24" rx="3" fill="#00a2ff"/><rect x="4" y="13" width="24" height="6" rx="3" fill="#00a2ff"/></svg><span>datascale<span class="hr">hr</span></span></a>
+      <span class="tag">Review Hub</span>
+      <span class="spacer"></span>
+      <a class="src" href="index.html">&larr; Back to hub</a>
+      <a class="src" href="https://datascalehr.com/" target="_blank" rel="noopener">Live site &#8599;</a>
+    </div>
+  </header>
+  <main>
+    <div class="wrap intro">
+      <p class="eyebrow">Provenance</p>
+      <h1>Library standards referenced</h1>
+      <p class="muted" style="max-width:72ch">Each improvement to the datascalehr homepage is grounded in a defined object in the standards library. Below is every object file referenced — <b>95 in total</b> across 15 groups — with why it applied and its full text reproduced verbatim (expand to read). Paths are relative to <code>library/standards/</code>.</p>
+      <div class="tools">
+        <button type="button" data-all="open">Expand all</button>
+        <button type="button" data-all="close">Collapse all</button>
+      </div>
+      <nav class="toc" aria-label="Jump to group"><a href="#1-semantic-web-structured-data-schema-org">1 · Semantic Web &amp; Structured Data — Schema.org <b>9</b></a><a href="#2-web-platform-semantic-html-html-elements">2 · Web Platform — Semantic HTML (html-elements) <b>7</b></a><a href="#2-web-platform-css-interoperable-baseline">2 · Web Platform — CSS &amp; interoperable baseline <b>9</b></a><a href="#3-accessibility-wcag-2-2-success-criteria">3 · Accessibility — WCAG 2.2 success criteria <b>13</b></a><a href="#3-accessibility-wai-aria-roles-apg-pattern">3 · Accessibility — WAI-ARIA (roles &amp; APG pattern) <b>5</b></a><a href="#4-performance-core-web-vitals">4 · Performance — Core Web Vitals <b>3</b></a><a href="#5-search-seo-geo">5 · Search, SEO &amp; GEO <b>13</b></a><a href="#6-design-systems-ux">6 · Design Systems &amp; UX <b>6</b></a><a href="#7-content-editorial">7 · Content &amp; Editorial <b>2</b></a><a href="#o1-consent-privacy-ethical-design">O1 · Consent, privacy &amp; ethical design <b>6</b></a><a href="#o2-geo-answer-engine-optimization">O2 · GEO / answer-engine optimization <b>5</b></a><a href="#o3-expanded-structured-data">O3 · Expanded structured data <b>5</b></a><a href="#o4-accessibility-conformance-vpat">O4 · Accessibility conformance (VPAT) <b>3</b></a><a href="#o5-content-provenance-on-media">O5 · Content provenance on media <b>6</b></a><a href="#o6-inp-lighthouse-readability">O6 · INP, Lighthouse &amp; readability <b>3</b></a></nav>
+    </div>
+    <div class="wrap">
+    <section class="grp" id="1-semantic-web-structured-data-schema-org">
+      <div class="stdgroup">
+        <h2>1 · Semantic Web &amp; Structured Data — Schema.org <span class="muted" style="font-weight:600;font-size:.8rem">· 9</span></h2>
+        
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/schema-org/types/Organization.md</span>
+            <span class="stdwhy">The @graph Organization node (name, url, logo, sameAs LinkedIn) identifying datascalehr as the publisher.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;schema:Organization&quot;
+label: Organization
+kind: type
+standard: schema-org
+standard_title: Schema.org
+standard_version: 30.0
+source_url: &quot;https://schema.org/Organization&quot;
+license: CC-BY-SA-3.0
+domain: [1]
+subClassOf: [Thing]
+---
+
+# Organization
+
+&gt; An organization such as a school, NGO, corporation, club, etc.
+
+**Kind:** Type (`rdfs:Class`) · **Standard:** Schema.org · **Source:** https://schema.org/Organization
+
+## Parent types
+- [[Thing]]
+
+## Direct subtypes
+- [[Airline]]
+- [[Consortium]]
+- [[Cooperative]]
+- [[Corporation]]
+- [[EducationalOrganization]]
+- [[FundingScheme]]
+- [[GovernmentOrganization]]
+- [[LibrarySystem]]
+- [[LocalBusiness]]
+- [[MedicalOrganization]]
+- [[NGO]]
+- [[NewsMediaOrganization]]
+- [[OnlineBusiness]]
+- [[PerformingGroup]]
+- [[PoliticalParty]]
+- [[Project]]
+- [[ResearchOrganization]]
+- [[SearchRescueOrganization]]
+- [[SportsOrganization]]
+- [[WorkersUnion]]
+
+## Properties (domain includes this type)
+- [[acceptedPaymentMethod]]
+- [[actionableFeedbackPolicy]]
+- [[address]]
+- [[agentInteractionStatistic]]
+- [[aggregateRating]]
+- [[alumni]]
+- [[areaServed]]
+- [[award]]
+- [[awards]]
+- [[brand]]
+- [[companyRegistration]]
+- [[contactPoint]]
+- [[contactPoints]]
+- [[correctionsPolicy]]
+- [[department]]
+- [[dissolutionDate]]
+- [[diversityPolicy]]
+- [[diversityStaffingReport]]
+- [[duns]]
+- [[email]]
+- [[employee]]
+- [[employees]]
+- [[ethicsPolicy]]
+- [[event]]
+- [[events]]
+- [[faxNumber]]
+- [[founder]]
+- [[founders]]
+- [[foundingDate]]
+- [[foundingLocation]]
+- [[funder]]
+- [[funding]]
+- [[globalLocationNumber]]
+- [[hasCertification]]
+- [[hasCredential]]
+- [[hasGS1DigitalLink]]
+- [[hasMemberProgram]]
+- [[hasMerchantReturnPolicy]]
+- [[hasOfferCatalog]]
+- [[hasPOS]]
+- [[hasShippingService]]
+- [[interactionStatistic]]
+- [[isicV4]]
+- [[iso6523Code]]
+- [[keywords]]
+- [[knowsAbout]]
+- [[knowsLanguage]]
+- [[legalAddress]]
+- [[legalName]]
+- [[legalRepresentative]]
+- [[leiCode]]
+- [[location]]
+- [[logo]]
+- [[makesOffer]]
+- [[member]]
+- [[memberOf]]
+- [[members]]
+- [[naics]]
+- [[nonprofitStatus]]
+- [[numberOfEmployees]]
+- [[ownershipFundingInfo]]
+- [[owns]]
+- [[parentOrganization]]
+- [[publishingPrinciples]]
+- [[review]]
+- [[reviews]]
+- [[seeks]]
+- [[serviceArea]]
+- [[skills]]
+- [[slogan]]
+- [[sponsor]]
+- [[subOrganization]]
+- [[taxID]]
+- [[telephone]]
+- [[unnamedSourcesPolicy]]
+- [[vatID]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/schema-org/types/WebSite.md</span>
+            <span class="stdwhy">The WebSite node tying the page to the site and its publisher.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;schema:WebSite&quot;
+label: WebSite
+kind: type
+standard: schema-org
+standard_title: Schema.org
+standard_version: 30.0
+source_url: &quot;https://schema.org/WebSite&quot;
+license: CC-BY-SA-3.0
+domain: [1]
+subClassOf: [CreativeWork]
+---
+
+# WebSite
+
+&gt; A WebSite is a set of related web pages and other items typically served from a single web domain and accessible via URLs.
+
+**Kind:** Type (`rdfs:Class`) · **Standard:** Schema.org · **Source:** https://schema.org/WebSite
+
+## Parent types
+- [[CreativeWork]]
+
+## Properties (domain includes this type)
+- [[issn]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/schema-org/types/WebPage.md</span>
+            <span class="stdwhy">The WebPage node describing the homepage and linking it to the software it is about.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;schema:WebPage&quot;
+label: WebPage
+kind: type
+standard: schema-org
+standard_title: Schema.org
+standard_version: 30.0
+source_url: &quot;https://schema.org/WebPage&quot;
+license: CC-BY-SA-3.0
+domain: [1]
+subClassOf: [CreativeWork]
+---
+
+# WebPage
+
+&gt; A web page. Every web page is implicitly assumed to be declared to be of type WebPage, so the various properties about that webpage, such as `breadcrumb` may be used. We recommend explicit declaration if these properties are specified, but if they are found outside of an itemscope, they will be assumed to be about the page.
+
+**Kind:** Type (`rdfs:Class`) · **Standard:** Schema.org · **Source:** https://schema.org/WebPage
+
+## Parent types
+- [[CreativeWork]]
+
+## Direct subtypes
+- [[AboutPage]]
+- [[CheckoutPage]]
+- [[CollectionPage]]
+- [[ContactPage]]
+- [[FAQPage]]
+- [[ItemPage]]
+- [[MedicalWebPage]]
+- [[ProfilePage]]
+- [[QAPage]]
+- [[RealEstateListing]]
+- [[SearchResultsPage]]
+
+## Properties (domain includes this type)
+- [[breadcrumb]]
+- [[lastReviewed]]
+- [[mainContentOfPage]]
+- [[primaryImageOfPage]]
+- [[relatedLink]]
+- [[reviewedBy]]
+- [[significantLink]]
+- [[significantLinks]]
+- [[speakable]]
+- [[specialty]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/schema-org/types/SoftwareApplication.md</span>
+            <span class="stdwhy">Models the product (KMod) with applicationCategory BusinessApplication — the node carrying the rating and reviews.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;schema:SoftwareApplication&quot;
+label: SoftwareApplication
+kind: type
+standard: schema-org
+standard_title: Schema.org
+standard_version: 30.0
+source_url: &quot;https://schema.org/SoftwareApplication&quot;
+license: CC-BY-SA-3.0
+domain: [1]
+subClassOf: [CreativeWork]
+---
+
+# SoftwareApplication
+
+&gt; A software application.
+
+**Kind:** Type (`rdfs:Class`) · **Standard:** Schema.org · **Source:** https://schema.org/SoftwareApplication
+
+## Parent types
+- [[CreativeWork]]
+
+## Direct subtypes
+- [[MobileApplication]]
+- [[OperatingSystem]]
+- [[RuntimePlatform]]
+- [[VideoGame]]
+- [[WebApplication]]
+
+## Properties (domain includes this type)
+- [[applicationCategory]]
+- [[applicationSubCategory]]
+- [[applicationSuite]]
+- [[availableOnDevice]]
+- [[countriesNotSupported]]
+- [[countriesSupported]]
+- [[device]]
+- [[downloadUrl]]
+- [[featureList]]
+- [[fileSize]]
+- [[installUrl]]
+- [[memoryRequirements]]
+- [[operatingSystem]]
+- [[permissions]]
+- [[processorRequirements]]
+- [[releaseNotes]]
+- [[requirements]]
+- [[runtimePlatform]]
+- [[screenshot]]
+- [[softwareAddOn]]
+- [[softwareHelp]]
+- [[softwareRequirements]]
+- [[softwareVersion]]
+- [[storageRequirements]]
+- [[supportingData]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/schema-org/types/AggregateRating.md</span>
+            <span class="stdwhy">The 5/5 aggregate over the five customer reviews attached to the SoftwareApplication.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;schema:AggregateRating&quot;
+label: AggregateRating
+kind: type
+standard: schema-org
+standard_title: Schema.org
+standard_version: 30.0
+source_url: &quot;https://schema.org/AggregateRating&quot;
+license: CC-BY-SA-3.0
+domain: [1]
+subClassOf: [Rating]
+---
+
+# AggregateRating
+
+&gt; The average rating based on multiple ratings or reviews.
+
+**Kind:** Type (`rdfs:Class`) · **Standard:** Schema.org · **Source:** https://schema.org/AggregateRating
+
+## Parent types
+- [[Rating]]
+
+## Direct subtypes
+- [[EmployerAggregateRating]]
+
+## Properties (domain includes this type)
+- [[itemReviewed]]
+- [[ratingCount]]
+- [[reviewCount]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/schema-org/types/Review.md</span>
+            <span class="stdwhy">Each of the five testimonials became a Review with author + reviewRating instead of undifferentiated text.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;schema:Review&quot;
+label: Review
+kind: type
+standard: schema-org
+standard_title: Schema.org
+standard_version: 30.0
+source_url: &quot;https://schema.org/Review&quot;
+license: CC-BY-SA-3.0
+domain: [1]
+subClassOf: [CreativeWork]
+---
+
+# Review
+
+&gt; A review of an item - for example, of a restaurant, movie, or store.
+
+**Kind:** Type (`rdfs:Class`) · **Standard:** Schema.org · **Source:** https://schema.org/Review
+
+## Parent types
+- [[CreativeWork]]
+
+## Direct subtypes
+- [[ClaimReview]]
+- [[CriticReview]]
+- [[EmployerReview]]
+- [[MediaReview]]
+- [[Recommendation]]
+- [[UserReview]]
+
+## Properties (domain includes this type)
+- [[associatedClaimReview]]
+- [[associatedMediaReview]]
+- [[associatedReview]]
+- [[itemReviewed]]
+- [[negativeNotes]]
+- [[positiveNotes]]
+- [[reviewAspect]]
+- [[reviewBody]]
+- [[reviewRating]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/schema-org/types/FAQPage.md</span>
+            <span class="stdwhy">The four solution tabs re-expressed as an FAQPage so search / AI answer engines can lift the Q&As.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;schema:FAQPage&quot;
+label: FAQPage
+kind: type
+standard: schema-org
+standard_title: Schema.org
+standard_version: 30.0
+source_url: &quot;https://schema.org/FAQPage&quot;
+license: CC-BY-SA-3.0
+domain: [1]
+subClassOf: [WebPage]
+---
+
+# FAQPage
+
+&gt; A [[FAQPage]] is a [[WebPage]] presenting one or more &quot;[Frequently asked questions](https://en.wikipedia.org/wiki/FAQ)&quot; (see also [[QAPage]]).
+
+**Kind:** Type (`rdfs:Class`) · **Standard:** Schema.org · **Source:** https://schema.org/FAQPage
+
+## Parent types
+- [[WebPage]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/schema-org/types/Question.md</span>
+            <span class="stdwhy">Each FAQ entry’s Question (the tab’s problem framing).</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;schema:Question&quot;
+label: Question
+kind: type
+standard: schema-org
+standard_title: Schema.org
+standard_version: 30.0
+source_url: &quot;https://schema.org/Question&quot;
+license: CC-BY-SA-3.0
+domain: [1]
+subClassOf: [Comment]
+---
+
+# Question
+
+&gt; A specific question - e.g. from a user seeking answers online, or collected in a Frequently Asked Questions (FAQ) document.
+
+**Kind:** Type (`rdfs:Class`) · **Standard:** Schema.org · **Source:** https://schema.org/Question
+
+## Parent types
+- [[Comment]]
+
+## Properties (domain includes this type)
+- [[acceptedAnswer]]
+- [[answerCount]]
+- [[eduQuestionType]]
+- [[parentItem]]
+- [[suggestedAnswer]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/schema-org/types/Answer.md</span>
+            <span class="stdwhy">Each Question’s acceptedAnswer (datascalehr’s solution text).</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;schema:Answer&quot;
+label: Answer
+kind: type
+standard: schema-org
+standard_title: Schema.org
+standard_version: 30.0
+source_url: &quot;https://schema.org/Answer&quot;
+license: CC-BY-SA-3.0
+domain: [1]
+subClassOf: [Comment]
+---
+
+# Answer
+
+&gt; An answer offered to a question; perhaps correct, perhaps opinionated or wrong.
+
+**Kind:** Type (`rdfs:Class`) · **Standard:** Schema.org · **Source:** https://schema.org/Answer
+
+## Parent types
+- [[Comment]]
+
+## Properties (domain includes this type)
+- [[answerExplanation]]
+- [[parentItem]]
+</pre>
+        </details>
+      </div>
+    </section>
+    <section class="grp" id="2-web-platform-semantic-html-html-elements">
+      <div class="stdgroup">
+        <h2>2 · Web Platform — Semantic HTML (html-elements) <span class="muted" style="font-weight:600;font-size:.8rem">· 7</span></h2>
+        
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/html-elements/elements/main.md</span>
+            <span class="stdwhy">The single &lt;main&gt; landmark wrapping the page’s primary content.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;element:main&quot;
+label: main
+kind: element
+standard: html-elements
+standard_title: HTML / SVG / MathML elements
+source_url: &quot;https://html.spec.whatwg.org/multipage/grouping-content.html#the-main-element&quot;
+license: reference
+domain: [2]
+ingest: full
+group: html
+dom_interface: HTMLElement
+---
+
+# main
+
+The `&lt;main&gt;` HTML element, defined in HTML Standard. DOM interface: `HTMLElement`.
+
+**Kind:** Element · **Group:** html · **DOM interface:** `HTMLElement` · **Source:** https://html.spec.whatwg.org/multipage/grouping-content.html#the-main-element
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/html-elements/elements/nav.md</span>
+            <span class="stdwhy">The &lt;nav&gt; landmark around primary navigation (was a generic Divi menu container).</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;element:nav&quot;
+label: nav
+kind: element
+standard: html-elements
+standard_title: HTML / SVG / MathML elements
+source_url: &quot;https://html.spec.whatwg.org/multipage/sections.html#the-nav-element&quot;
+license: reference
+domain: [2]
+ingest: full
+group: html
+dom_interface: HTMLElement
+---
+
+# nav
+
+The `&lt;nav&gt;` HTML element, defined in HTML Standard. DOM interface: `HTMLElement`.
+
+**Kind:** Element · **Group:** html · **DOM interface:** `HTMLElement` · **Source:** https://html.spec.whatwg.org/multipage/sections.html#the-nav-element
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/html-elements/elements/section.md</span>
+            <span class="stdwhy">Each content block is a labelled &lt;section&gt; (aria-labelledby its heading).</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;element:section&quot;
+label: section
+kind: element
+standard: html-elements
+standard_title: HTML / SVG / MathML elements
+source_url: &quot;https://html.spec.whatwg.org/multipage/sections.html#the-section-element&quot;
+license: reference
+domain: [2]
+ingest: full
+group: html
+dom_interface: HTMLElement
+---
+
+# section
+
+The `&lt;section&gt;` HTML element, defined in HTML Standard. DOM interface: `HTMLElement`.
+
+**Kind:** Element · **Group:** html · **DOM interface:** `HTMLElement` · **Source:** https://html.spec.whatwg.org/multipage/sections.html#the-section-element
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/html-elements/elements/blockquote.md</span>
+            <span class="stdwhy">Testimonials are real &lt;blockquote&gt;s rather than styled &lt;div&gt;s.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;element:blockquote&quot;
+label: blockquote
+kind: element
+standard: html-elements
+standard_title: HTML / SVG / MathML elements
+source_url: &quot;https://html.spec.whatwg.org/multipage/grouping-content.html#the-blockquote-element&quot;
+license: reference
+domain: [2]
+ingest: full
+group: html
+dom_interface: HTMLQuoteElement
+---
+
+# blockquote
+
+The `&lt;blockquote&gt;` HTML element, defined in HTML Standard. DOM interface: `HTMLQuoteElement`.
+
+**Kind:** Element · **Group:** html · **DOM interface:** `HTMLQuoteElement` · **Source:** https://html.spec.whatwg.org/multipage/grouping-content.html#the-blockquote-element
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/html-elements/elements/dl.md</span>
+            <span class="stdwhy">Stat pairs (number + label) use &lt;dl&gt;/&lt;dt&gt;/&lt;dd&gt; to bind value to meaning.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;element:dl&quot;
+label: dl
+kind: element
+standard: html-elements
+standard_title: HTML / SVG / MathML elements
+source_url: &quot;https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element&quot;
+license: reference
+domain: [2]
+ingest: full
+group: html
+dom_interface: HTMLDListElement
+---
+
+# dl
+
+The `&lt;dl&gt;` HTML element, defined in HTML Standard. DOM interface: `HTMLDListElement`.
+
+**Kind:** Element · **Group:** html · **DOM interface:** `HTMLDListElement` · **Source:** https://html.spec.whatwg.org/multipage/grouping-content.html#the-dl-element
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/html-elements/elements/link.md</span>
+            <span class="stdwhy">The &lt;link rel="canonical"&gt; and font &lt;link&gt;s in the head.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;element:link&quot;
+label: link
+kind: element
+standard: html-elements
+standard_title: HTML / SVG / MathML elements
+source_url: &quot;https://html.spec.whatwg.org/multipage/semantics.html#the-link-element&quot;
+license: reference
+domain: [2]
+ingest: full
+group: html
+dom_interface: HTMLLinkElement
+---
+
+# link
+
+The `&lt;link&gt;` HTML element, defined in HTML Standard. DOM interface: `HTMLLinkElement`.
+
+**Kind:** Element · **Group:** html · **DOM interface:** `HTMLLinkElement` · **Source:** https://html.spec.whatwg.org/multipage/semantics.html#the-link-element
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/html-elements/elements/meta.md</span>
+            <span class="stdwhy">The &lt;meta&gt; description / OG / Twitter / viewport / robots tags.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;element:meta&quot;
+label: meta
+kind: element
+standard: html-elements
+standard_title: HTML / SVG / MathML elements
+source_url: &quot;https://html.spec.whatwg.org/multipage/semantics.html#meta&quot;
+license: reference
+domain: [2]
+ingest: full
+group: html
+dom_interface: HTMLMetaElement
+---
+
+# meta
+
+The `&lt;meta&gt;` HTML element, defined in HTML Standard. DOM interface: `HTMLMetaElement`.
+
+**Kind:** Element · **Group:** html · **DOM interface:** `HTMLMetaElement` · **Source:** https://html.spec.whatwg.org/multipage/semantics.html#meta
+</pre>
+        </details>
+      </div>
+    </section>
+    <section class="grp" id="2-web-platform-css-interoperable-baseline">
+      <div class="stdgroup">
+        <h2>2 · Web Platform — CSS &amp; interoperable baseline <span class="muted" style="font-weight:600;font-size:.8rem">· 9</span></h2>
+        
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/css/functions/clamp.md</span>
+            <span class="stdwhy">The fluid type scale and spacing use clamp() so sizes respond without breakpoints.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;css:clamp()&quot;
+label: clamp()
+kind: function
+standard: css
+standard_title: CSS (mdn-data)
+source_url: &quot;https://developer.mozilla.org/docs/Web/CSS/clamp&quot;
+license: CC0-1.0
+domain: [2]
+ingest: full
+css_status: standard
+---
+
+# clamp()
+
+CSS function.
+
+**Syntax:** `clamp( &lt;calc-sum&gt;#{3} )`
+
+**Groups:** CSS Values and Units
+
+**Kind:** Function · **Standard:** CSS (mdn-data) · **Status:** standard · **Source:** https://developer.mozilla.org/docs/Web/CSS/clamp
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/css/selectors/focus-visible.md</span>
+            <span class="stdwhy">The :focus-visible selector powering keyboard-only focus rings.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;css::focus-visible&quot;
+label: &quot;:focus-visible&quot;
+kind: selector
+standard: css
+standard_title: CSS (mdn-data)
+source_url: &quot;https://developer.mozilla.org/docs/Web/CSS/:focus-visible&quot;
+license: CC0-1.0
+domain: [2]
+ingest: full
+css_status: standard
+---
+
+# :focus-visible
+
+CSS selector.
+
+**Syntax:** `:focus-visible`
+
+**Groups:** Selectors
+
+**Kind:** Selector · **Standard:** CSS (mdn-data) · **Status:** standard · **Source:** https://developer.mozilla.org/docs/Web/CSS/:focus-visible
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/css/properties/backdrop-filter.md</span>
+            <span class="stdwhy">The translucent sticky header uses backdrop-filter.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;css:backdrop-filter&quot;
+label: backdrop-filter
+kind: property
+standard: css
+standard_title: CSS (mdn-data)
+source_url: &quot;https://developer.mozilla.org/docs/Web/CSS/backdrop-filter&quot;
+license: CC0-1.0
+domain: [2]
+ingest: full
+css_status: standard
+---
+
+# backdrop-filter
+
+CSS property.
+
+**Syntax:** `none | &lt;filter-value-list&gt;`
+
+**Inherited:** no
+**Initial:** `none`
+**Percentages:** no
+**Applies to:** allElementsSVGContainerElements
+**Groups:** Filter Effects
+
+**Kind:** Property · **Standard:** CSS (mdn-data) · **Status:** standard · **Source:** https://developer.mozilla.org/docs/Web/CSS/backdrop-filter
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/baseline/features/prefers-reduced-motion.md</span>
+            <span class="stdwhy">Animations/scroll-behavior are disabled under prefers-reduced-motion.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;baseline:prefers-reduced-motion&quot;
+label: prefers-reduced-motion media query
+kind: web-feature
+standard: baseline
+standard_title: Baseline (web-features)
+source_url: &quot;https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion&quot;
+license: Apache-2.0
+domain: [2]
+ingest: full
+baseline: high
+group: &quot;&quot;
+baseline_since: 2020-01-15
+---
+
+# prefers-reduced-motion media query
+
+&gt; The prefers-reduced-motion CSS media query sets styles based on whether the user prefers to minimize the amount of non-essential animations on the device, such as scrolling, panning, zooming, and strobing.
+
+**Baseline:** Widely available (Baseline) · since 2020-01-15
+
+**Kind:** Web feature · **Standard:** Baseline (web-features) · **Source:** https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion
+
+## Browser support (min version)
+| Browser | Since |
+|---|---|
+| Chrome | 74 |
+| Edge | 79 |
+| Firefox | 63 |
+| Safari | 10.1 |
+
+## Links
+- [Can I Use](https://caniuse.com/prefers-reduced-motion)
+- [Specification](https://drafts.csswg.org/mediaqueries-5/#prefers-reduced-motion)
+- [Web Platform Status](https://webstatus.dev/features/prefers-reduced-motion)
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/baseline/features/prefers-color-scheme.md</span>
+            <span class="stdwhy">The dark theme is delivered via prefers-color-scheme (the original was light-only).</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;baseline:prefers-color-scheme&quot;
+label: prefers-color-scheme media query
+kind: web-feature
+standard: baseline
+standard_title: Baseline (web-features)
+source_url: &quot;https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme&quot;
+license: Apache-2.0
+domain: [2]
+ingest: full
+baseline: high
+group: &quot;&quot;
+baseline_since: 2020-01-15
+---
+
+# prefers-color-scheme media query
+
+&gt; The prefers-color-scheme CSS media query sets styles based on the requested color scheme, light or dark.
+
+**Baseline:** Widely available (Baseline) · since 2020-01-15
+
+**Kind:** Web feature · **Standard:** Baseline (web-features) · **Source:** https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme
+
+## Browser support (min version)
+| Browser | Since |
+|---|---|
+| Chrome | 76 |
+| Edge | 79 |
+| Firefox | 67 |
+| Safari | 12.1 |
+
+## Links
+- [Specification](https://drafts.csswg.org/mediaqueries-5/#prefers-color-scheme)
+- [Web Platform Status](https://webstatus.dev/features/prefers-color-scheme)
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/baseline/features/font-display.md</span>
+            <span class="stdwhy">The webfont loads with font-display:swap to avoid invisible text.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;baseline:font-display&quot;
+label: font-display
+kind: web-feature
+standard: baseline
+standard_title: Baseline (web-features)
+source_url: &quot;https://drafts.csswg.org/css-fonts-4/#font-display-desc&quot;
+license: Apache-2.0
+domain: [2]
+ingest: full
+baseline: high
+group: &quot;&quot;
+baseline_since: 2020-01-15
+---
+
+# font-display
+
+&gt; The font-display CSS descriptor sets whether to show a substitute font or nothing while a font face loads. The property manages what&#x27;s known as a flash of unstyled text or flash of invisible text.
+
+**Baseline:** Widely available (Baseline) · since 2020-01-15
+
+**Kind:** Web feature · **Standard:** Baseline (web-features) · **Source:** https://drafts.csswg.org/css-fonts-4/#font-display-desc
+
+## Browser support (min version)
+| Browser | Since |
+|---|---|
+| Chrome | 60 |
+| Edge | 79 |
+| Firefox | 58 |
+| Safari | 11.1 |
+
+## Links
+- [Can I Use](https://caniuse.com/css-font-rendering-controls)
+- [Specification](https://drafts.csswg.org/css-fonts-4/#font-display-desc)
+- [Web Platform Status](https://webstatus.dev/features/font-display)
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/baseline/features/loading-lazy-media.md</span>
+            <span class="stdwhy">Below-the-fold media / iframes use loading="lazy".</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;baseline:loading-lazy-media&quot;
+label: Lazy-loading media
+kind: web-feature
+standard: baseline
+standard_title: Baseline (web-features)
+source_url: &quot;https://github.com/whatwg/html/pull/11980&quot;
+license: Apache-2.0
+domain: [2]
+ingest: full
+baseline: False
+group: &quot;&quot;
+---
+
+# Lazy-loading media
+
+&gt; The loading=&quot;lazy&quot; attribute for  and  elements defers loading the media resource until the element is near the viewport. This matches the lazy-loading behavior for  and  elements.
+
+**Baseline:** Limited availability
+
+**Kind:** Web feature · **Standard:** Baseline (web-features) · **Source:** https://github.com/whatwg/html/pull/11980
+
+## Browser support (min version)
+| Browser | Since |
+|---|---|
+| Chrome | 150 |
+| Edge | 150 |
+
+## Links
+- [Can I Use](https://caniuse.com/loading-lazy-media)
+- [Specification](https://github.com/whatwg/html/pull/11980)
+- [Web Platform Status](https://webstatus.dev/features/loading-lazy-media)
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/baseline/features/meta-theme-color.md</span>
+            <span class="stdwhy">Theme-aware &lt;meta name="theme-color"&gt; for light and dark.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;baseline:meta-theme-color&quot;
+label: &quot;&lt;meta name=\&quot;theme-color\&quot;&gt;&quot;
+kind: web-feature
+standard: baseline
+standard_title: Baseline (web-features)
+source_url: &quot;https://html.spec.whatwg.org/multipage/semantics.html#meta-theme-color&quot;
+license: Apache-2.0
+domain: [2]
+ingest: full
+baseline: False
+group: &quot;&quot;
+---
+
+# &lt;meta name=&quot;theme-color&quot;&gt;
+
+&gt; The name=&quot;theme-color&quot; attribute for the  HTML element suggests a color that the browser can use to customize the display of the page or the browser user interface.
+
+**Baseline:** Limited availability
+
+**Kind:** Web feature · **Standard:** Baseline (web-features) · **Source:** https://html.spec.whatwg.org/multipage/semantics.html#meta-theme-color
+
+## Browser support (min version)
+| Browser | Since |
+|---|---|
+| Safari | 15 |
+
+## Links
+- [Can I Use](https://caniuse.com/meta-theme-color)
+- [Specification](https://html.spec.whatwg.org/multipage/semantics.html#meta-theme-color)
+- [Web Platform Status](https://webstatus.dev/features/meta-theme-color)
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/css/properties/color-scheme.md</span>
+            <span class="stdwhy">The <code>color-scheme: light dark</code> declaration so native controls (range sliders, checkboxes) and scrollbars render correctly in the dark theme — an improvement over the light-only live site.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;css:color-scheme&quot;
+label: color-scheme
+kind: property
+standard: css
+standard_title: CSS (mdn-data)
+source_url: &quot;https://developer.mozilla.org/docs/Web/CSS/color-scheme&quot;
+license: CC0-1.0
+domain: [2]
+ingest: full
+css_status: standard
+---
+
+# color-scheme
+
+CSS property.
+
+**Syntax:** `normal | [ light | dark | &lt;custom-ident&gt; ]+ &amp;&amp; only?`
+
+**Inherited:** yes
+**Initial:** `normal`
+**Percentages:** no
+**Applies to:** allElementsAndText
+**Groups:** CSS Color
+
+**Kind:** Property · **Standard:** CSS (mdn-data) · **Status:** standard · **Source:** https://developer.mozilla.org/docs/Web/CSS/color-scheme
+</pre>
+        </details>
+      </div>
+    </section>
+    <section class="grp" id="3-accessibility-wcag-2-2-success-criteria">
+      <div class="stdgroup">
+        <h2>3 · Accessibility — WCAG 2.2 success criteria <span class="muted" style="font-weight:600;font-size:.8rem">· 13</span></h2>
+        
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/wcag-2.2/success-criteria/3.1.1-language-of-page.md</span>
+            <span class="stdwhy">Backs the valid, programmatically-determinable lang="en" on &lt;html&gt;.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;wcag:3.1.1&quot;
+label: 3.1.1 Language of Page
+kind: success-criterion
+standard: wcag-2.2
+standard_title: WCAG 2.2
+source_url: &quot;https://www.w3.org/TR/WCAG22/#language-of-page&quot;
+license: W3C-Document
+domain: [3]
+ingest: full
+number: 3.1.1
+level: A
+principle: Understandable
+guideline: Readable
+---
+
+# 3.1.1 Language of Page
+
+**Level A**
+
+&gt; The default human language of each web page can be programmatically determined.
+
+**Kind:** Success Criterion · **Standard:** WCAG 2.2 · **Level:** A · **Source:** https://www.w3.org/TR/WCAG22/#language-of-page
+
+## Context
+- Principle: [[3-understandable|Understandable]]
+- Guideline: [[3.1-readable|Readable]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/wcag-2.2/success-criteria/1.3.1-info-and-relationships.md</span>
+            <span class="stdwhy">Core fix for the broken heading structure: single H1, ordered H2/H3, landmarks, blockquote, dl.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;wcag:1.3.1&quot;
+label: 1.3.1 Info and Relationships
+kind: success-criterion
+standard: wcag-2.2
+standard_title: WCAG 2.2
+source_url: &quot;https://www.w3.org/TR/WCAG22/#info-and-relationships&quot;
+license: W3C-Document
+domain: [3]
+ingest: full
+number: 1.3.1
+level: A
+principle: Perceivable
+guideline: Adaptable
+---
+
+# 1.3.1 Info and Relationships
+
+**Level A**
+
+&gt; Information, structure, and relationships conveyed through presentation can be programmatically determined or are available in text.
+
+**Kind:** Success Criterion · **Standard:** WCAG 2.2 · **Level:** A · **Source:** https://www.w3.org/TR/WCAG22/#info-and-relationships
+
+## Context
+- Principle: [[1-perceivable|Perceivable]]
+- Guideline: [[1.3-adaptable|Adaptable]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/wcag-2.2/success-criteria/2.4.10-section-headings.md</span>
+            <span class="stdwhy">Every section is introduced by a real heading, so the page is navigable by heading.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;wcag:2.4.10&quot;
+label: 2.4.10 Section Headings
+kind: success-criterion
+standard: wcag-2.2
+standard_title: WCAG 2.2
+source_url: &quot;https://www.w3.org/TR/WCAG22/#section-headings&quot;
+license: W3C-Document
+domain: [3]
+ingest: full
+number: 2.4.10
+level: AAA
+principle: Operable
+guideline: Navigable
+---
+
+# 2.4.10 Section Headings
+
+**Level AAA**
+
+&gt; Section headings are used to organize the content.
+
+   &quot;Heading&quot; is used in its general sense and includes titles and other ways to add a
+      heading to different types of content.
+
+   This success criterion covers sections within writing, not user interface components. User interface components are covered under [Success Criterion 4.1.2](#name-role-value).
+
+**Kind:** Success Criterion · **Standard:** WCAG 2.2 · **Level:** AAA · **Source:** https://www.w3.org/TR/WCAG22/#section-headings
+
+## Context
+- Principle: [[2-operable|Operable]]
+- Guideline: [[2.4-navigable|Navigable]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/wcag-2.2/success-criteria/1.1.1-non-text-content.md</span>
+            <span class="stdwhy">Backs alt/aria on logo, icons and marks — verified 0 images missing alt.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;wcag:1.1.1&quot;
+label: 1.1.1 Non-text Content
+kind: success-criterion
+standard: wcag-2.2
+standard_title: WCAG 2.2
+source_url: &quot;https://www.w3.org/TR/WCAG22/#non-text-content&quot;
+license: W3C-Document
+domain: [3]
+ingest: full
+number: 1.1.1
+level: A
+principle: Perceivable
+guideline: Text Alternatives
+---
+
+# 1.1.1 Non-text Content
+
+**Level A**
+
+&gt; All non-text content that is presented to the user has a text alternative that serves the equivalent purpose, except for the situations listed below.
+
+      Controls, Input
+
+If non-text content is a control or accepts user input, then it has a name that describes its purpose. (Refer to [Success Criterion 4.1.2](#name-role-value) for additional requirements for controls and content that accepts user input.)
+
+      Time-Based Media
+
+If non-text content is time-based media, then text alternatives at least provide descriptive
+            identification of the non-text content. (Refer to [Guideline 1.2](#time-based-media) for additional requirements for media.)
+
+      Test
+
+If non-text content is a test or exercise that would be invalid if presented in text, then text alternatives at least provide descriptive identification of the non-text
+            content.
+
+      Sensory
+
+If non-text content is primarily intended to create a specific sensory experience, then text alternatives at least provide descriptive identification of the non-text
+            content.
+
+      CAPTCHA
+
+If the purpose of non-text content is to confirm that content is being accessed by
+            a person rather than a computer, then text alternatives that identify and describe
+            the purpose of the non-text content are provided, and alternative forms of CAPTCHA
+            using output modes for different types of sensory perception are provided to accommodate
+            different disabilities.
+
+      Decoration, Formatting, Invisible
+
+If non-text content is pure decoration, is used only for visual formatting, or is not presented to users, then it is implemented
+            in a way that it can be ignored by assistive technology.
+
+**Kind:** Success Criterion · **Standard:** WCAG 2.2 · **Level:** A · **Source:** https://www.w3.org/TR/WCAG22/#non-text-content
+
+## Context
+- Principle: [[1-perceivable|Perceivable]]
+- Guideline: [[1.1-text-alternatives|Text Alternatives]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/wcag-2.2/success-criteria/1.4.3-contrast-minimum.md</span>
+            <span class="stdwhy">Reason the accent was darkened to --brand-ink for text/links on white.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;wcag:1.4.3&quot;
+label: 1.4.3 Contrast (Minimum)
+kind: success-criterion
+standard: wcag-2.2
+standard_title: WCAG 2.2
+source_url: &quot;https://www.w3.org/TR/WCAG22/#contrast-minimum&quot;
+license: W3C-Document
+domain: [3]
+ingest: full
+number: 1.4.3
+level: AA
+principle: Perceivable
+guideline: Distinguishable
+---
+
+# 1.4.3 Contrast (Minimum)
+
+**Level AA**
+
+&gt; The visual presentation of text and images of text has a contrast ratio of at least 4.5:1, except for the following:
+
+      Large Text
+
+Large-scale text and images of large-scale text have a contrast ratio of at least 3:1;
+
+      Incidental
+
+Text or images of text that are part of an inactive user interface component, that are pure decoration, that are not visible to anyone, or that are part of a picture that contains significant
+            other visual content, have no contrast requirement.
+
+      Logotypes
+
+Text that is part of a logo or brand name has no contrast requirement.
+
+**Kind:** Success Criterion · **Standard:** WCAG 2.2 · **Level:** AA · **Source:** https://www.w3.org/TR/WCAG22/#contrast-minimum
+
+## Context
+- Principle: [[1-perceivable|Perceivable]]
+- Guideline: [[1.4-distinguishable|Distinguishable]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/wcag-2.2/success-criteria/2.4.1-bypass-blocks.md</span>
+            <span class="stdwhy">Backs the “Skip to main content” link past the sticky header and nav.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;wcag:2.4.1&quot;
+label: 2.4.1 Bypass Blocks
+kind: success-criterion
+standard: wcag-2.2
+standard_title: WCAG 2.2
+source_url: &quot;https://www.w3.org/TR/WCAG22/#bypass-blocks&quot;
+license: W3C-Document
+domain: [3]
+ingest: full
+number: 2.4.1
+level: A
+principle: Operable
+guideline: Navigable
+---
+
+# 2.4.1 Bypass Blocks
+
+**Level A**
+
+&gt; A mechanism is available to bypass blocks of content that are repeated on multiple web pages.
+
+**Kind:** Success Criterion · **Standard:** WCAG 2.2 · **Level:** A · **Source:** https://www.w3.org/TR/WCAG22/#bypass-blocks
+
+## Context
+- Principle: [[2-operable|Operable]]
+- Guideline: [[2.4-navigable|Navigable]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/wcag-2.2/success-criteria/2.4.7-focus-visible.md</span>
+            <span class="stdwhy">Backs the visible focus ring on every interactive control.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;wcag:2.4.7&quot;
+label: 2.4.7 Focus Visible
+kind: success-criterion
+standard: wcag-2.2
+standard_title: WCAG 2.2
+source_url: &quot;https://www.w3.org/TR/WCAG22/#focus-visible&quot;
+license: W3C-Document
+domain: [3]
+ingest: full
+number: 2.4.7
+level: AA
+principle: Operable
+guideline: Navigable
+---
+
+# 2.4.7 Focus Visible
+
+**Level AA**
+
+&gt; Any keyboard operable user interface has a mode of operation where the keyboard focus indicator is visible.
+
+**Kind:** Success Criterion · **Standard:** WCAG 2.2 · **Level:** AA · **Source:** https://www.w3.org/TR/WCAG22/#focus-visible
+
+## Context
+- Principle: [[2-operable|Operable]]
+- Guideline: [[2.4-navigable|Navigable]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/wcag-2.2/success-criteria/2.4.11-focus-not-obscured-minimum.md</span>
+            <span class="stdwhy">Scroll offsets keep a focused target from hiding behind the sticky header.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;wcag:2.4.11&quot;
+label: 2.4.11 Focus Not Obscured (Minimum)
+kind: success-criterion
+standard: wcag-2.2
+standard_title: WCAG 2.2
+source_url: &quot;https://www.w3.org/TR/WCAG22/#focus-not-obscured-minimum&quot;
+license: W3C-Document
+domain: [3]
+ingest: full
+number: 2.4.11
+level: AA
+principle: Operable
+guideline: Navigable
+change_2.2: New
+---
+
+# 2.4.11 Focus Not Obscured (Minimum)
+
+**Level AA** · _New in WCAG 2.2_
+
+&gt; When a user interface component receives keyboard focus, the component is not entirely hidden due to author-created content.
+
+    Where content in a configurable interface can be repositioned by the user, then only the initial positions of user-movable content are considered for testing and conformance of this success criterion.
+
+    Content opened by the *user* may obscure the component receiving focus. If the user can reveal the focused component without advancing the keyboard focus, the component with focus is not considered visually hidden due to author-created content.
+
+**Kind:** Success Criterion · **Standard:** WCAG 2.2 · **Level:** AA · **Source:** https://www.w3.org/TR/WCAG22/#focus-not-obscured-minimum
+
+## Context
+- Principle: [[2-operable|Operable]]
+- Guideline: [[2.4-navigable|Navigable]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/wcag-2.2/success-criteria/2.4.13-focus-appearance.md</span>
+            <span class="stdwhy">Drives focus-ring thickness (3px) and contrast so the state is perceivable.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;wcag:2.4.13&quot;
+label: 2.4.13 Focus Appearance
+kind: success-criterion
+standard: wcag-2.2
+standard_title: WCAG 2.2
+source_url: &quot;https://www.w3.org/TR/WCAG22/#focus-appearance&quot;
+license: W3C-Document
+domain: [3]
+ingest: full
+number: 2.4.13
+level: AAA
+principle: Operable
+guideline: Navigable
+change_2.2: New
+---
+
+# 2.4.13 Focus Appearance
+
+**Level AAA** · _New in WCAG 2.2_
+
+&gt; When the keyboard focus indicator is visible, an area of the focus indicator meets all the following:
+
+        is at least as large as the area of a 2 CSS pixel thick perimeter of the unfocused component or sub-component, and
+        has a contrast ratio of at least 3:1 between the same pixels in the focused and unfocused states.
+
+Exceptions:
+
+        The focus indicator is determined by the user agent and cannot be adjusted by the author, or
+        The focus indicator and the indicator&#x27;s background color are not modified by the author.
+
+    What is perceived as the user interface component or sub-component (to determine the perimeter) depends on its visual presentation. The visual presentation includes the component&#x27;s visible content, border, and component-specific background. It does not include shadow and glow effects outside the component&#x27;s content, background, or border.
+
+    Examples of sub-components that may receive a focus indicator are menu items in an opened drop-down menu, or focusable cells in a grid.
+
+    Contrast calculations can be based on colors defined within the technology (such as HTML, CSS, and SVG). Pixels modified by user agent resolution enhancements and anti-aliasing can be ignored.
+
+**Kind:** Success Criterion · **Standard:** WCAG 2.2 · **Level:** AAA · **Source:** https://www.w3.org/TR/WCAG22/#focus-appearance
+
+## Context
+- Principle: [[2-operable|Operable]]
+- Guideline: [[2.4-navigable|Navigable]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/wcag-2.2/success-criteria/2.5.8-target-size-minimum.md</span>
+            <span class="stdwhy">New in 2.2: controls are ≥44px; icon buttons meet the 24px minimum.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;wcag:2.5.8&quot;
+label: 2.5.8 Target Size (Minimum)
+kind: success-criterion
+standard: wcag-2.2
+standard_title: WCAG 2.2
+source_url: &quot;https://www.w3.org/TR/WCAG22/#target-size-minimum&quot;
+license: W3C-Document
+domain: [3]
+ingest: full
+number: 2.5.8
+level: AA
+principle: Operable
+guideline: Input Modalities
+change_2.2: New
+---
+
+# 2.5.8 Target Size (Minimum)
+
+**Level AA** · _New in WCAG 2.2_
+
+&gt; The size of the target for pointer inputs is at least 24 by 24 CSS pixels, except when:
+
+        Spacing
+        Undersized targets (those less than 24 by 24 CSS pixels) are positioned so that if a 24 CSS pixel diameter circle is centered on the bounding box of each, the circles do not intersect another target or the circle for another undersized target;
+        Equivalent
+        The function can be achieved through a different control on the same page that meets this criterion;
+        Inline
+        The target is in a sentence or its size is otherwise constrained by the line-height of non-target text;
+        User Agent Control
+        The size of the target is determined by the user agent and is not modified by the author;
+        Essential
+        A particular presentation of the target is essential or is legally required for the information being conveyed.
+
+    Targets that allow for values to be selected spatially based on position within the target are considered one target for the purpose of the success criterion. Examples include sliders, color pickers displaying a gradient of colors, or editable areas where you position the cursor.
+
+    For inline targets the line-height should be interpreted as perpendicular to the flow of text. For example, in a language displayed vertically, the line-height would be horizontal.
+
+**Kind:** Success Criterion · **Standard:** WCAG 2.2 · **Level:** AA · **Source:** https://www.w3.org/TR/WCAG22/#target-size-minimum
+
+## Context
+- Principle: [[2-operable|Operable]]
+- Guideline: [[2.5-input-modalities|Input Modalities]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/wcag-2.2/success-criteria/1.4.4-resize-text.md</span>
+            <span class="stdwhy">The viewport allows zoom; text resizes to 200%.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;wcag:1.4.4&quot;
+label: 1.4.4 Resize Text
+kind: success-criterion
+standard: wcag-2.2
+standard_title: WCAG 2.2
+source_url: &quot;https://www.w3.org/TR/WCAG22/#resize-text&quot;
+license: W3C-Document
+domain: [3]
+ingest: full
+number: 1.4.4
+level: AA
+principle: Perceivable
+guideline: Distinguishable
+---
+
+# 1.4.4 Resize Text
+
+**Level AA**
+
+&gt; Except for captions and images of text, text can be resized without assistive technology up to 200 percent without loss of content or functionality.
+
+**Kind:** Success Criterion · **Standard:** WCAG 2.2 · **Level:** AA · **Source:** https://www.w3.org/TR/WCAG22/#resize-text
+
+## Context
+- Principle: [[1-perceivable|Perceivable]]
+- Guideline: [[1.4-distinguishable|Distinguishable]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/wcag-2.2/success-criteria/1.4.10-reflow.md</span>
+            <span class="stdwhy">The layout reflows to one column with no horizontal scroll down to 320px.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;wcag:1.4.10&quot;
+label: 1.4.10 Reflow
+kind: success-criterion
+standard: wcag-2.2
+standard_title: WCAG 2.2
+source_url: &quot;https://www.w3.org/TR/WCAG22/#reflow&quot;
+license: W3C-Document
+domain: [3]
+ingest: full
+number: 1.4.10
+level: AA
+principle: Perceivable
+guideline: Distinguishable
+---
+
+# 1.4.10 Reflow
+
+**Level AA**
+
+&gt; Content can be presented without loss of information or functionality, and without requiring scrolling in two dimensions for:
+
+       Vertical scrolling content at a width equivalent to 320 CSS pixels;
+       Horizontal scrolling content at a height equivalent to 256 CSS pixels.
+
+Except for parts of the content which require two-dimensional layout for usage or meaning.
+
+  320 CSS pixels is equivalent to a starting viewport width of 1280 CSS pixels wide at 400% zoom. For web content which is designed to scroll horizontally (e.g., with vertical text), 256 CSS pixels is equivalent to a starting viewport height of 1024 CSS pixels at 400% zoom.
+
+   Examples of content which requires two-dimensional layout are images required for understanding (such as maps and diagrams), video, games, presentations, data tables (not individual cells), and interfaces where it is necessary to keep toolbars in view while manipulating content. It is acceptable to provide two-dimensional scrolling for such parts of the content.
+
+**Kind:** Success Criterion · **Standard:** WCAG 2.2 · **Level:** AA · **Source:** https://www.w3.org/TR/WCAG22/#reflow
+
+## Context
+- Principle: [[1-perceivable|Perceivable]]
+- Guideline: [[1.4-distinguishable|Distinguishable]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/wcag-2.2/success-criteria/4.1.2-name-role-value.md</span>
+            <span class="stdwhy">Backs the ARIA on the tabs and aria-label’d icon buttons — correct name/role/state.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;wcag:4.1.2&quot;
+label: &quot;4.1.2 Name, Role, Value&quot;
+kind: success-criterion
+standard: wcag-2.2
+standard_title: WCAG 2.2
+source_url: &quot;https://www.w3.org/TR/WCAG22/#name-role-value&quot;
+license: W3C-Document
+domain: [3]
+ingest: full
+number: 4.1.2
+level: A
+principle: Robust
+guideline: Compatible
+---
+
+# 4.1.2 Name, Role, Value
+
+**Level A**
+
+&gt; For all user interface components (including but not limited to: form elements, links and components generated by scripts),
+     the name and role can be programmatically determined; states, properties, and values that can be set by the user can be programmatically set; and notification of changes to these items is available to user agents, including assistive technologies.
+
+   This success criterion is primarily for web authors who develop or script their own
+      user interface components. For example, standard HTML controls already meet this success
+      criterion when used according to specification.
+
+**Kind:** Success Criterion · **Standard:** WCAG 2.2 · **Level:** A · **Source:** https://www.w3.org/TR/WCAG22/#name-role-value
+
+## Context
+- Principle: [[4-robust|Robust]]
+- Guideline: [[4.1-compatible|Compatible]]
+</pre>
+        </details>
+      </div>
+    </section>
+    <section class="grp" id="3-accessibility-wai-aria-roles-apg-pattern">
+      <div class="stdgroup">
+        <h2>3 · Accessibility — WAI-ARIA (roles &amp; APG pattern) <span class="muted" style="font-weight:600;font-size:.8rem">· 5</span></h2>
+        
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/aria-apg/patterns/Tabs.md</span>
+            <span class="stdwhy">The exact pattern the “Problems we solve” tabs implement: roles + arrow/Home/End keys.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;aria-apg:tabs&quot;
+label: Tabs
+kind: pattern
+standard: aria-apg
+standard_title: ARIA Authoring Practices Guide (APG)
+source_url: &quot;https://www.w3.org/WAI/ARIA/apg/patterns/tabs/&quot;
+license: W3C-Document
+domain: [3]
+ingest: reference
+---
+
+# Tabs
+
+Tabs organize content into layered panels where only one panel is shown at a time, selected by a row of tab controls. A role=tablist contains role=tab elements whose aria-selected and aria-controls tie each tab to its role=tabpanel, and a roving tabindex keeps only the active tab tabbable. Left/Right or Up/Down arrows move between tabs, Home and End jump to the first and last tab, and activation can follow focus automatically or wait for Enter or Space.
+
+**Kind:** Pattern · **Standard:** ARIA Authoring Practices Guide (APG) · **Source:** https://www.w3.org/WAI/ARIA/apg/patterns/tabs/
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/wai-aria/roles/banner.md</span>
+            <span class="stdwhy">The header maps to the banner landmark role.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;aria:banner&quot;
+label: banner
+kind: role
+standard: wai-aria
+standard_title: WAI-ARIA 1.2
+source_url: &quot;https://www.w3.org/TR/wai-aria-1.2/#banner&quot;
+license: W3C-Document
+domain: [3]
+ingest: full
+abstract: false
+---
+
+# banner
+
+WAI-ARIA role.
+
+**Kind:** Role · **Standard:** WAI-ARIA 1.2 · **Source:** https://www.w3.org/TR/wai-aria-1.2/#banner
+
+## Inherits from
+- [[landmark]]
+
+## Supported states &amp; properties
+- [[aria-atomic]]
+- [[aria-busy]]
+- [[aria-controls]]
+- [[aria-current]]
+- [[aria-describedby]]
+- [[aria-details]]
+- [[aria-dropeffect]]
+- [[aria-flowto]]
+- [[aria-grabbed]]
+- [[aria-hidden]]
+- [[aria-keyshortcuts]]
+- [[aria-label]]
+- [[aria-labelledby]]
+- [[aria-live]]
+- [[aria-owns]]
+- [[aria-relevant]]
+- [[aria-roledescription]]
+
+## Name from
+- author
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/wai-aria/roles/navigation.md</span>
+            <span class="stdwhy">The nav maps to the navigation landmark role.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;aria:navigation&quot;
+label: navigation
+kind: role
+standard: wai-aria
+standard_title: WAI-ARIA 1.2
+source_url: &quot;https://www.w3.org/TR/wai-aria-1.2/#navigation&quot;
+license: W3C-Document
+domain: [3]
+ingest: full
+abstract: false
+---
+
+# navigation
+
+WAI-ARIA role.
+
+**Kind:** Role · **Standard:** WAI-ARIA 1.2 · **Source:** https://www.w3.org/TR/wai-aria-1.2/#navigation
+
+## Inherits from
+- [[landmark]]
+
+## Supported states &amp; properties
+- [[aria-atomic]]
+- [[aria-busy]]
+- [[aria-controls]]
+- [[aria-current]]
+- [[aria-describedby]]
+- [[aria-details]]
+- [[aria-dropeffect]]
+- [[aria-flowto]]
+- [[aria-grabbed]]
+- [[aria-hidden]]
+- [[aria-keyshortcuts]]
+- [[aria-label]]
+- [[aria-labelledby]]
+- [[aria-live]]
+- [[aria-owns]]
+- [[aria-relevant]]
+- [[aria-roledescription]]
+
+## Name from
+- author
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/wai-aria/roles/contentinfo.md</span>
+            <span class="stdwhy">The footer maps to the contentinfo landmark role.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;aria:contentinfo&quot;
+label: contentinfo
+kind: role
+standard: wai-aria
+standard_title: WAI-ARIA 1.2
+source_url: &quot;https://www.w3.org/TR/wai-aria-1.2/#contentinfo&quot;
+license: W3C-Document
+domain: [3]
+ingest: full
+abstract: false
+---
+
+# contentinfo
+
+WAI-ARIA role.
+
+**Kind:** Role · **Standard:** WAI-ARIA 1.2 · **Source:** https://www.w3.org/TR/wai-aria-1.2/#contentinfo
+
+## Inherits from
+- [[landmark]]
+
+## Supported states &amp; properties
+- [[aria-atomic]]
+- [[aria-busy]]
+- [[aria-controls]]
+- [[aria-current]]
+- [[aria-describedby]]
+- [[aria-details]]
+- [[aria-dropeffect]]
+- [[aria-flowto]]
+- [[aria-grabbed]]
+- [[aria-hidden]]
+- [[aria-keyshortcuts]]
+- [[aria-label]]
+- [[aria-labelledby]]
+- [[aria-live]]
+- [[aria-owns]]
+- [[aria-relevant]]
+- [[aria-roledescription]]
+
+## Name from
+- author
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/wai-aria/roles/tablist.md</span>
+            <span class="stdwhy">The role behind the tab strip (with tab/tabpanel) implementing the pattern above.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;aria:tablist&quot;
+label: tablist
+kind: role
+standard: wai-aria
+standard_title: WAI-ARIA 1.2
+source_url: &quot;https://www.w3.org/TR/wai-aria-1.2/#tablist&quot;
+license: W3C-Document
+domain: [3]
+ingest: full
+abstract: false
+---
+
+# tablist
+
+WAI-ARIA role.
+
+**Kind:** Role · **Standard:** WAI-ARIA 1.2 · **Source:** https://www.w3.org/TR/wai-aria-1.2/#tablist
+
+## Inherits from
+- [[composite]]
+
+## Supported states &amp; properties
+- [[aria-activedescendant]]
+- [[aria-atomic]]
+- [[aria-busy]]
+- [[aria-controls]]
+- [[aria-current]]
+- [[aria-describedby]]
+- [[aria-details]]
+- [[aria-disabled]]
+- [[aria-dropeffect]]
+- [[aria-flowto]]
+- [[aria-grabbed]]
+- [[aria-hidden]]
+- [[aria-keyshortcuts]]
+- [[aria-label]]
+- [[aria-labelledby]]
+- [[aria-level]]
+- [[aria-live]]
+- [[aria-multiselectable]]
+- [[aria-orientation]]
+- [[aria-owns]]
+- [[aria-relevant]]
+- [[aria-roledescription]]
+
+## Name from
+- author
+</pre>
+        </details>
+      </div>
+    </section>
+    <section class="grp" id="4-performance-core-web-vitals">
+      <div class="stdgroup">
+        <h2>4 · Performance — Core Web Vitals <span class="muted" style="font-weight:600;font-size:.8rem">· 3</span></h2>
+        
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/core-web-vitals/metrics/Largest-Contentful-Paint-LCP.md</span>
+            <span class="stdwhy">Why fonts use preconnect + swap and the hero is text/CSS — LCP paints without a blocking round-trip.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;core-web-vitals:lcp&quot;
+label: Largest Contentful Paint (LCP)
+kind: metric
+standard: core-web-vitals
+standard_title: &quot;Core Web Vitals &amp; Web Vitals metrics&quot;
+source_url: &quot;https://web.dev/articles/lcp&quot;
+license: reference
+domain: [4]
+ingest: reference
+---
+
+# Largest Contentful Paint (LCP)
+
+LCP records how long it takes for the single largest image or text block in the viewport to render, marking the point at which the main content has visibly loaded. It is the Core Web Vital for perceived loading speed. Slow LCP usually traces back to server response time, render-blocking resources, or heavy hero assets.
+
+**Kind:** Metric · **Standard:** Core Web Vitals &amp; Web Vitals metrics · **Source:** https://web.dev/articles/lcp
+
+- **good:** &lt;2.5s
+- **needs_improvement:** 2.5s-4.0s
+- **poor:** &gt;4.0s
+- **measures:** loading performance
+- **type:** core
+
+## Related
+- [[Time-to-First-Byte-TTFB|Time to First Byte (TTFB)]]
+- [[First-Contentful-Paint-FCP|First Contentful Paint (FCP)]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/core-web-vitals/metrics/Cumulative-Layout-Shift-CLS.md</span>
+            <span class="stdwhy">Why layout reserves space (font fallback, sized media, no late banners) to avoid shifting.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;core-web-vitals:cls&quot;
+label: Cumulative Layout Shift (CLS)
+kind: metric
+standard: core-web-vitals
+standard_title: &quot;Core Web Vitals &amp; Web Vitals metrics&quot;
+source_url: &quot;https://web.dev/articles/cls&quot;
+license: reference
+domain: [4]
+ingest: reference
+---
+
+# Cumulative Layout Shift (CLS)
+
+CLS sums the unexpected movement of visible elements during the page&#x27;s lifespan, scoring how often content jumps as fonts, images, or ads load in. It is the Core Web Vital for visual stability and is a unitless score rather than a time. Reserving space for media and embeds is the most common way to keep it low.
+
+**Kind:** Metric · **Standard:** Core Web Vitals &amp; Web Vitals metrics · **Source:** https://web.dev/articles/cls
+
+- **good:** &lt;0.1
+- **needs_improvement:** 0.1-0.25
+- **poor:** &gt;0.25
+- **measures:** visual stability
+- **type:** core
+
+## Related
+- [[Largest-Contentful-Paint-LCP|Largest Contentful Paint (LCP)]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/core-web-vitals/metrics/First-Contentful-Paint-FCP.md</span>
+            <span class="stdwhy">Why CSS is inlined and JS minimal/deferred — nothing render-blocking delays first paint.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;core-web-vitals:fcp&quot;
+label: First Contentful Paint (FCP)
+kind: metric
+standard: core-web-vitals
+standard_title: &quot;Core Web Vitals &amp; Web Vitals metrics&quot;
+source_url: &quot;https://web.dev/articles/fcp&quot;
+license: reference
+domain: [4]
+ingest: reference
+---
+
+# First Contentful Paint (FCP)
+
+FCP captures the moment the browser paints the first piece of DOM content, giving the user their first signal that the page is actually loading. It is a supporting diagnostic metric rather than a Core Web Vital and helps explain slow LCP. Render-blocking CSS and JavaScript are its typical bottlenecks.
+
+**Kind:** Metric · **Standard:** Core Web Vitals &amp; Web Vitals metrics · **Source:** https://web.dev/articles/fcp
+
+- **good:** &lt;1.8s
+- **needs_improvement:** 1.8s-3.0s
+- **poor:** &gt;3.0s
+- **measures:** loading (first paint)
+- **type:** supporting
+
+## Related
+- [[Largest-Contentful-Paint-LCP|Largest Contentful Paint (LCP)]]
+- [[Time-to-First-Byte-TTFB|Time to First Byte (TTFB)]]
+</pre>
+        </details>
+      </div>
+    </section>
+    <section class="grp" id="5-search-seo-geo">
+      <div class="stdgroup">
+        <h2>5 · Search, SEO &amp; GEO <span class="muted" style="font-weight:600;font-size:.8rem">· 13</span></h2>
+        
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/open-graph/properties/og-type.md</span>
+            <span class="stdwhy">The og:type=website on the homepage.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;open-graph:og-type&quot;
+label: &quot;og:type&quot;
+kind: property
+standard: open-graph
+standard_title: Open Graph Protocol
+source_url: &quot;https://ogp.me/#types&quot;
+license: reference
+domain: [5]
+ingest: reference
+---
+
+# og:type
+
+Declares what kind of object the page represents, for example website, article, or music.song, which in turn unlocks a set of type-specific properties. If omitted it defaults to website. The chosen value determines which vertical vocabulary (article:, book:, music:, video:, profile:) may be attached.
+
+**Kind:** Property · **Standard:** Open Graph Protocol · **Source:** https://ogp.me/#types
+
+- **required:** yes
+- **default:** website
+
+## Related
+- [[article]]
+- [[book]]
+- [[music.song]]
+- [[video.movie]]
+- [[profile]]
+- [[website]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/open-graph/properties/og-title.md</span>
+            <span class="stdwhy">The og:title used for social/link unfurls.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;open-graph:og-title&quot;
+label: &quot;og:title&quot;
+kind: property
+standard: open-graph
+standard_title: Open Graph Protocol
+source_url: &quot;https://ogp.me/#metadata&quot;
+license: reference
+domain: [5]
+ingest: reference
+---
+
+# og:title
+
+Sets the human-readable title of the object as it should appear in the graph, such as a headline or product name. It is one of the four properties every Open Graph page is required to declare. Sharing surfaces usually render it as the bold heading of the preview card.
+
+**Kind:** Property · **Standard:** Open Graph Protocol · **Source:** https://ogp.me/#metadata
+
+- **required:** yes
+- **group:** basic
+
+## Related
+- [[og-type|og:type]]
+- [[og-description|og:description]]
+- [[og-url|og:url]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/open-graph/properties/og-image.md</span>
+            <span class="stdwhy">The og:image added for sharing previews (was missing on the live site).</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;open-graph:og-image&quot;
+label: &quot;og:image&quot;
+kind: property
+standard: open-graph
+standard_title: Open Graph Protocol
+source_url: &quot;https://ogp.me/#structured&quot;
+license: reference
+domain: [5]
+ingest: reference
+---
+
+# og:image
+
+Points to an image URL that visually represents the object in the graph and appears as the thumbnail in shared previews. A page may list several og:image tags so consumers can pick the best fit. It anchors a family of structured sub-properties describing the image&#x27;s dimensions, type, and alt text.
+
+**Kind:** Property · **Standard:** Open Graph Protocol · **Source:** https://ogp.me/#structured
+
+- **required:** yes
+- **repeatable:** yes
+
+## Related
+- [[og-image-url|og:image:url]]
+- [[og-image-secure_url|og:image:secure_url]]
+- [[og-image-alt|og:image:alt]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/open-graph/properties/og-image-alt.md</span>
+            <span class="stdwhy">Accessible alt text for the OG image.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;open-graph:og-image-alt&quot;
+label: &quot;og:image:alt&quot;
+kind: property
+standard: open-graph
+standard_title: Open Graph Protocol
+source_url: &quot;https://ogp.me/#structured&quot;
+license: reference
+domain: [5]
+ingest: reference
+---
+
+# og:image:alt
+
+Supplies a text description of the image for people who cannot see it, mirroring an HTML alt attribute. It should describe the picture rather than restate the page title. Accessible sharing surfaces expose it to assistive technology.
+
+**Kind:** Property · **Standard:** Open Graph Protocol · **Source:** https://ogp.me/#structured
+
+- **group:** image
+- **accessibility:** yes
+
+## Related
+- [[og-image|og:image]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/open-graph/properties/og-description.md</span>
+            <span class="stdwhy">The og:description for unfurls.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;open-graph:og-description&quot;
+label: &quot;og:description&quot;
+kind: property
+standard: open-graph
+standard_title: Open Graph Protocol
+source_url: &quot;https://ogp.me/#optional&quot;
+license: reference
+domain: [5]
+ingest: reference
+---
+
+# og:description
+
+Offers a one- or two-sentence summary of the object shown beneath the title in preview cards. It is optional but strongly recommended because it drives click-through. Keeping it concise avoids truncation across different platforms.
+
+**Kind:** Property · **Standard:** Open Graph Protocol · **Source:** https://ogp.me/#optional
+
+- **group:** optional
+
+## Related
+- [[og-title|og:title]]
+- [[og-site_name|og:site_name]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/google-rich-results/rich-result-types/Software-app.md</span>
+            <span class="stdwhy">The rich-result type the SoftwareApplication markup targets.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;google-rich-results:software-app&quot;
+label: Software app
+kind: rich-result-type
+standard: google-rich-results
+standard_title: Google-supported structured data (rich result) types
+source_url: &quot;https://developers.google.com/search/docs/appearance/structured-data/software-app&quot;
+license: reference
+domain: [5]
+ingest: reference
+---
+
+# Software app
+
+Describes an application with its rating, price, and operating system so Google can present an app rich result. It highlights key install and quality signals in Search. Aimed at app publishers and download pages.
+
+**Kind:** Rich Result Type · **Standard:** Google-supported structured data (rich result) types · **Source:** https://developers.google.com/search/docs/appearance/structured-data/software-app
+
+- **schema:** SoftwareApplication
+
+## Related
+- [[Review-snippet|Review snippet]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/google-rich-results/rich-result-types/Review-snippet.md</span>
+            <span class="stdwhy">The rich-result type behind the Review/AggregateRating markup (star snippets).</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;google-rich-results:review-snippet&quot;
+label: Review snippet
+kind: rich-result-type
+standard: google-rich-results
+standard_title: Google-supported structured data (rich result) types
+source_url: &quot;https://developers.google.com/search/docs/appearance/structured-data/review-snippet&quot;
+license: reference
+domain: [5]
+ingest: reference
+---
+
+# Review snippet
+
+Attaches a rating or short review excerpt to another entity such as a product, business, or recipe. Google can then show star ratings in the result. Aggregate ratings summarize many reviews into a single score.
+
+**Kind:** Rich Result Type · **Standard:** Google-supported structured data (rich result) types · **Source:** https://developers.google.com/search/docs/appearance/structured-data/review-snippet
+
+- **schema:** Review / AggregateRating
+
+## Related
+- [[Product]]
+- [[Local-business|Local business]]
+- [[Movie]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/twitter-cards/tags/summary_large_image.md</span>
+            <span class="stdwhy">The corrected Twitter card — the original leaked a blog post’s byline/read-time via twitter:label/data.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;twitter-cards:summary-large-image&quot;
+label: summary_large_image
+kind: tag
+standard: twitter-cards
+standard_title: X (Twitter) Cards
+source_url: &quot;https://developer.x.com/en/docs/x-for-websites/cards/overview/summary-card-with-large-image&quot;
+license: reference
+domain: [5]
+ingest: reference
+---
+
+# summary_large_image
+
+Is a card type that places a large, edge-to-edge image above the title and description. It is favored for visually driven content where the picture leads. It uses the same tags as summary but renders the image much larger.
+
+**Kind:** Tag · **Standard:** X (Twitter) Cards · **Source:** https://developer.x.com/en/docs/x-for-websites/cards/overview/summary-card-with-large-image
+
+- **group:** card-type
+
+## Related
+- [[summary]]
+- [[twitter-image|twitter:image]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/robots-txt/directives/Robots-meta-tag.md</span>
+            <span class="stdwhy">The mechanism behind the &lt;meta name="robots"&gt; index/follow directive.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;robots-txt:robots-meta-tag&quot;
+label: Robots meta tag
+kind: directive
+standard: robots-txt
+standard_title: Robots Exclusion Protocol (RFC 9309)
+source_url: &quot;https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag&quot;
+license: IETF-Trust
+domain: [5]
+ingest: reference
+---
+
+# Robots meta tag
+
+Is an HTML meta element in a page&#x27;s head that carries per-page indexing directives such as noindex or nofollow to crawlers. Unlike robots.txt it controls indexing and link following rather than fetching. It only works if the crawler is allowed to fetch the page in the first place.
+
+**Kind:** Directive · **Standard:** Robots Exclusion Protocol (RFC 9309) · **Source:** https://developers.google.com/search/docs/crawling-indexing/robots-meta-tag
+
+- **concept:** yes
+- **location:** html head
+
+## Related
+- [[noindex]]
+- [[nofollow]]
+- [[X-Robots-Tag]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/google-search-essentials/policies/Descriptive-titles-and-snippets.md</span>
+            <span class="stdwhy">Backs the de-duplicated, descriptive &lt;title&gt; (was “datascalehr … - datascalehr”).</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;google-search-essentials:descriptive-titles&quot;
+label: Descriptive titles and snippets
+kind: policy
+standard: google-search-essentials
+standard_title: &quot;Google Search Essentials &amp; Spam Policies&quot;
+source_url: &quot;https://developers.google.com/search/docs/appearance/title-link&quot;
+license: reference
+domain: [5]
+ingest: reference
+---
+
+# Descriptive titles and snippets
+
+Clear, accurate title elements and meta descriptions help both users and Google understand what a page offers. Unique, descriptive titles improve how results are presented and clicked. Vague or duplicated titles weaken a page&#x27;s presentation in Search.
+
+**Kind:** Policy · **Standard:** Google Search Essentials &amp; Spam Policies · **Source:** https://developers.google.com/search/docs/appearance/title-link
+
+- **category:** best-practice
+
+## Related
+- [[Helpful-people-first-content|Helpful, people-first content]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/google-search-essentials/policies/Descriptive-alt-text-for-images.md</span>
+            <span class="stdwhy">Backs descriptive alt text on imagery.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;google-search-essentials:image-alt-text&quot;
+label: Descriptive alt text for images
+kind: policy
+standard: google-search-essentials
+standard_title: &quot;Google Search Essentials &amp; Spam Policies&quot;
+source_url: &quot;https://developers.google.com/search/docs/appearance/google-images&quot;
+license: reference
+domain: [5]
+ingest: reference
+---
+
+# Descriptive alt text for images
+
+Alt attributes describe an image&#x27;s content so Google and assistive technologies can interpret it. Meaningful alt text improves accessibility and helps images rank in image search. Missing or keyword-stuffed alt text reduces its value.
+
+**Kind:** Policy · **Standard:** Google Search Essentials &amp; Spam Policies · **Source:** https://developers.google.com/search/docs/appearance/google-images
+
+- **category:** best-practice
+
+## Related
+- [[Keyword-stuffing|Keyword stuffing]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/google-search-essentials/policies/Mobile-friendly-and-fast-pages.md</span>
+            <span class="stdwhy">Backs the responsive, fast, render-blocking-free build.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;google-search-essentials:mobile-friendly&quot;
+label: Mobile-friendly and fast pages
+kind: policy
+standard: google-search-essentials
+standard_title: &quot;Google Search Essentials &amp; Spam Policies&quot;
+source_url: &quot;https://developers.google.com/search/docs/appearance/page-experience&quot;
+license: reference
+domain: [5]
+ingest: reference
+---
+
+# Mobile-friendly and fast pages
+
+Because Google indexes with a mobile crawler, pages should render well and load quickly on phones. A responsive layout and good page experience help users and support performance in Search. Poor mobile usability can limit visibility.
+
+**Kind:** Policy · **Standard:** Google Search Essentials &amp; Spam Policies · **Source:** https://developers.google.com/search/docs/appearance/page-experience
+
+- **category:** best-practice
+
+## Related
+- [[Indexable-content-format|Indexable content format]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/eeat-qrg/concepts/Experience.md</span>
+            <span class="stdwhy">E-E-A-T rationale for keeping first-hand reviews + independently-validated metrics as trust signals.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;eeat-qrg:experience&quot;
+label: Experience
+kind: concept
+standard: eeat-qrg
+standard_title: &quot;Search Quality Rater concepts (E-E-A-T &amp; Page Quality)&quot;
+source_url: &quot;https://developers.google.com/search/blog/2022/12/google-raters-guidelines-e-e-a-t&quot;
+license: reference
+domain: [5]
+ingest: reference
+---
+
+# Experience
+
+Assesses whether the content creator has first-hand or life experience with the topic they cover. A review written by someone who actually used a product, or a guide by someone who has done the task, carries more weight. It is the first pillar added to the older E-A-T framework, making it E-E-A-T.
+
+**Kind:** Concept · **Standard:** Search Quality Rater concepts (E-E-A-T &amp; Page Quality) · **Source:** https://developers.google.com/search/blog/2022/12/google-raters-guidelines-e-e-a-t
+
+- **pillar:** E-E-A-T
+
+## Related
+- [[Expertise]]
+- [[Trust]]
+</pre>
+        </details>
+      </div>
+    </section>
+    <section class="grp" id="6-design-systems-ux">
+      <div class="stdgroup">
+        <h2>6 · Design Systems &amp; UX <span class="muted" style="font-weight:600;font-size:.8rem">· 6</span></h2>
+        
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/dtcg-tokens/token-types/design-token.md</span>
+            <span class="stdwhy">The design-token concept behind expressing color/space/type/radius/shadow as CSS custom properties.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;dtcg-tokens:design-token&quot;
+label: design token
+kind: token-type
+standard: dtcg-tokens
+standard_title: Design Tokens Format Module
+source_url: &quot;https://www.designtokens.org/tr/drafts/format/#design-token&quot;
+license: CC-BY-4.0
+domain: [6]
+ingest: reference
+---
+
+# design token
+
+A design token is the fundamental unit of the format: a named entity that stores a single design decision such as a color or spacing value. In JSON it is an object carrying at least a $value, and it may add a $type and $description. Tokens let teams share design values across tools and platforms.
+
+**Kind:** Token Type · **Standard:** Design Tokens Format Module · **Source:** https://www.designtokens.org/tr/drafts/format/#design-token
+
+- **category:** concept
+
+## Related
+- [[value|$value]]
+- [[type|$type]]
+- [[group]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/dtcg-tokens/token-types/color.md</span>
+            <span class="stdwhy">The color token type — basis for the --brand / --ink / --line palette in both themes.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;dtcg-tokens:color&quot;
+label: color
+kind: token-type
+standard: dtcg-tokens
+standard_title: Design Tokens Format Module
+source_url: &quot;https://www.designtokens.org/tr/drafts/format/#color&quot;
+license: CC-BY-4.0
+domain: [6]
+ingest: reference
+---
+
+# color
+
+The color type represents a color value used for fills, text, borders, and other visual properties. In the current specification its value is an object with a color space plus channel components, allowing colors beyond the sRGB gamut. Tools resolve it to whatever format a target platform requires.
+
+**Kind:** Token Type · **Standard:** Design Tokens Format Module · **Source:** https://www.designtokens.org/tr/drafts/format/#color
+
+- **category:** basic
+
+## Related
+- [[type|$type]]
+- [[value|$value]]
+- [[gradient]]
+- [[shadow]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/gestalt-principles/principles/Proximity.md</span>
+            <span class="stdwhy">Why related items (stat + label, quote + attribution) are grouped tightly.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;gestalt-principles:proximity&quot;
+label: Proximity
+kind: principle
+standard: gestalt-principles
+standard_title: Gestalt Principles of Visual Perception
+source_url: &quot;https://www.nngroup.com/articles/gestalt-proximity/&quot;
+license: reference
+domain: [6]
+ingest: reference
+---
+
+# Proximity
+
+Objects positioned close together are perceived as more related than objects that are farther apart. Spatial grouping lets designers convey relationships using layout alone, without borders or lines. Deliberate spacing organizes content and signals which items belong together.
+
+**Kind:** Principle · **Standard:** Gestalt Principles of Visual Perception · **Source:** https://www.nngroup.com/articles/gestalt-proximity/
+
+
+## Related
+- [[Common-Region|Common Region]]
+- [[Similarity]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/gestalt-principles/principles/Common-Region.md</span>
+            <span class="stdwhy">Why testimonials, metrics and audiences sit in bordered cards — a shared region reads as a unit.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;gestalt-principles:common-region&quot;
+label: Common Region
+kind: principle
+standard: gestalt-principles
+standard_title: Gestalt Principles of Visual Perception
+source_url: &quot;https://www.nngroup.com/articles/common-region/&quot;
+license: reference
+domain: [6]
+ingest: reference
+---
+
+# Common Region
+
+Elements enclosed within a shared boundary are perceived as a single group, even overriding proximity. Backgrounds, borders, and containers create strong grouping cues. Cards and panels rely on this principle to bundle related content.
+
+**Kind:** Principle · **Standard:** Gestalt Principles of Visual Perception · **Source:** https://www.nngroup.com/articles/common-region/
+
+
+## Related
+- [[Proximity]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/gestalt-principles/principles/Similarity.md</span>
+            <span class="stdwhy">Why repeated components share one visual language so like elements read as like.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;gestalt-principles:similarity&quot;
+label: Similarity
+kind: principle
+standard: gestalt-principles
+standard_title: Gestalt Principles of Visual Perception
+source_url: &quot;https://www.nngroup.com/articles/similarity-principle-in-visual-design/&quot;
+license: reference
+domain: [6]
+ingest: reference
+---
+
+# Similarity
+
+Elements that look alike in attributes such as color, shape, or size are perceived as part of the same group. Shared styling creates a sense of connection even when items are spread apart. This helps users recognize categories and relationships across an interface.
+
+**Kind:** Principle · **Standard:** Gestalt Principles of Visual Perception · **Source:** https://www.nngroup.com/articles/similarity-principle-in-visual-design/
+
+
+## Related
+- [[Proximity]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/nng-heuristics/heuristics/Flexibility-and-Efficiency-of-Use.md</span>
+            <span class="stdwhy">The manual light/dark theme switcher lets users personalise appearance (an accelerator) — the light-only live site offers no such control.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;nng-heuristics:7&quot;
+label: Flexibility and Efficiency of Use
+kind: heuristic
+standard: nng-heuristics
+standard_title: Nielsen Norman 10 Usability Heuristics
+source_url: &quot;https://www.nngroup.com/articles/flexibility-efficiency-heuristic/&quot;
+license: reference
+domain: [6]
+ingest: reference
+---
+
+# Flexibility and Efficiency of Use
+
+Systems should serve both novices and experts, letting frequent users tailor and accelerate common actions. Shortcuts, accelerators, and personalization allow experienced people to work faster while remaining invisible to newcomers. Catering to a range of skill levels makes the product efficient without sacrificing approachability.
+
+**Kind:** Heuristic · **Standard:** Nielsen Norman 10 Usability Heuristics · **Source:** https://www.nngroup.com/articles/flexibility-efficiency-heuristic/
+
+
+## Related
+- [[Recognition-Rather-Than-Recall|Recognition Rather Than Recall]]
+</pre>
+        </details>
+      </div>
+    </section>
+    <section class="grp" id="7-content-editorial">
+      <div class="stdgroup">
+        <h2>7 · Content &amp; Editorial <span class="muted" style="font-weight:600;font-size:.8rem">· 2</span></h2>
+        
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/plain-language/guidelines/Use-headings.md</span>
+            <span class="stdwhy">Backs using real, descriptive headings to organize the preserved copy.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;plain-language:headings&quot;
+label: Use headings
+kind: guideline
+standard: plain-language
+standard_title: Federal Plain Language Guidelines
+source_url: &quot;https://www.plainlanguage.gov/guidelines/design/use-headings/&quot;
+license: US-Gov-PublicDomain
+domain: [7]
+ingest: reference
+---
+
+# Use headings
+
+Break content into sections with informative headings, including question-form headings that mirror what readers ask. Clear headings let people skim and jump to the part that concerns them. They also reveal the document&#x27;s structure at a glance.
+
+**Kind:** Guideline · **Standard:** Federal Plain Language Guidelines · **Source:** https://www.plainlanguage.gov/guidelines/design/use-headings/
+
+- **group:** Design your document
+
+## Related
+- [[Organize-the-information|Organize the information]]
+- [[Use-lists-and-tables|Use lists and tables]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/plain-language/guidelines/Use-lists-and-tables.md</span>
+            <span class="stdwhy">Backs expressing stat groups and audience options as lists/definition lists.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;plain-language:lists-and-tables&quot;
+label: Use lists and tables
+kind: guideline
+standard: plain-language
+standard_title: Federal Plain Language Guidelines
+source_url: &quot;https://www.plainlanguage.gov/guidelines/design/use-lists/&quot;
+license: US-Gov-PublicDomain
+domain: [7]
+ingest: reference
+---
+
+# Use lists and tables
+
+Convert complex sequences, conditions, or comparisons into bulleted or numbered lists and tables that readers can scan. Structured layout exposes relationships that get buried inside long prose paragraphs. Lists and tables make eligibility rules and steps far easier to follow.
+
+**Kind:** Guideline · **Standard:** Federal Plain Language Guidelines · **Source:** https://www.plainlanguage.gov/guidelines/design/use-lists/
+
+- **group:** Design your document
+
+## Related
+- [[Use-headings|Use headings]]
+- [[Organize-the-information|Organize the information]]
+</pre>
+        </details>
+      </div>
+    </section>
+    <section class="grp" id="o1-consent-privacy-ethical-design">
+      <div class="stdgroup">
+        <h2>O1 · Consent, privacy &amp; ethical design <span class="muted" style="font-weight:600;font-size:.8rem">· 6</span></h2>
+        
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/gdpr/provisions/Consent.md</span>
+            <span class="stdwhy">The rebuilt consent banner treats consent as a freely-given, specific, informed opt-in — non-essential categories default OFF.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;gdpr:consent&quot;
+label: Consent
+kind: provision
+standard: gdpr
+standard_title: General Data Protection Regulation (EU 2016/679)
+source_url: &quot;https://gdpr.eu/&quot;
+license: reference
+domain: [9]
+ingest: reference
+---
+
+# Consent
+
+Where processing relies on consent, the regulation requires that consent be freely given, specific, informed, and unambiguous, and that the controller be able to demonstrate it. Consent must be as easy to withdraw as to give. Pre-ticked boxes and silence do not constitute valid consent.
+
+**Kind:** Provision · **Standard:** General Data Protection Regulation (EU 2016/679) · **Source:** https://gdpr.eu/
+
+- **type:** provision
+- **article:** 7
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/gdpr/provisions/Lawfulness-fairness-and-transparency.md</span>
+            <span class="stdwhy">Plain-language explanation of what each cookie category does, shown before any choice.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;gdpr:principle-lawfulness-fairness-transparency&quot;
+label: &quot;Lawfulness, fairness and transparency&quot;
+kind: provision
+standard: gdpr
+standard_title: General Data Protection Regulation (EU 2016/679)
+source_url: &quot;https://gdpr.eu/&quot;
+license: reference
+domain: [9]
+ingest: reference
+---
+
+# Lawfulness, fairness and transparency
+
+The first data protection principle requires that personal data be processed lawfully, fairly, and in a transparent manner in relation to the individual. Processing must rest on a valid legal ground and must not mislead the person about what happens to their data. People should be able to understand how and why their data is used.
+
+**Kind:** Provision · **Standard:** General Data Protection Regulation (EU 2016/679) · **Source:** https://gdpr.eu/
+
+- **type:** principle
+- **article:** 5
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/eprivacy/provisions/Cookie-consent-requirement.md</span>
+            <span class="stdwhy">Why analytics/marketing cookies fire only after affirmative consent, not on load.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;eprivacy:cookie-consent&quot;
+label: Cookie consent requirement
+kind: provision
+standard: eprivacy
+standard_title: ePrivacy Directive (2002/58/EC)
+source_url: &quot;https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0058&quot;
+license: reference
+domain: [9]
+ingest: reference
+---
+
+# Cookie consent requirement
+
+This provision requires that storing information, or gaining access to information already stored, on a user&#x27;s device is allowed only with the user&#x27;s informed consent. It is the legal basis for cookie banners across the EU. Users must be given clear information about the purposes before consenting.
+
+**Kind:** Provision · **Standard:** ePrivacy Directive (2002/58/EC) · **Source:** https://eur-lex.europa.eu/legal-content/EN/TXT/?uri=CELEX:32002L0058
+
+- **article:** 5(3)
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/deceptive-patterns/patterns/Obstruction.md</span>
+            <span class="stdwhy">The fix for the live site’s asymmetry: “Reject all” is now exactly as prominent as “Accept all”.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;deceptive-patterns:obstruction&quot;
+label: Obstruction
+kind: pattern
+standard: deceptive-patterns
+standard_title: Deceptive Design (Dark Patterns) Taxonomy
+source_url: &quot;https://www.deceptive.design/types/obstruction&quot;
+license: reference
+domain: [6]
+ingest: reference
+---
+
+# Obstruction
+
+Obstruction makes a particular action needlessly hard so users are steered toward an easier, business-friendly path. Extra steps and roadblocks are placed in front of choices the company would prefer people avoid. The added effort discourages the intended action.
+
+**Kind:** Pattern · **Standard:** Deceptive Design (Dark Patterns) Taxonomy · **Source:** https://www.deceptive.design/types/obstruction
+
+
+## Related
+- [[Hard-to-Cancel|Hard to Cancel]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/deceptive-patterns/patterns/Preselection.md</span>
+            <span class="stdwhy">Why the analytics/marketing toggles are unchecked by default (no pre-ticked consent).</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;deceptive-patterns:preselection&quot;
+label: Preselection
+kind: pattern
+standard: deceptive-patterns
+standard_title: Deceptive Design (Dark Patterns) Taxonomy
+source_url: &quot;https://www.deceptive.design/types/preselection&quot;
+license: reference
+domain: [6]
+ingest: reference
+---
+
+# Preselection
+
+Preselection sets a default option in favor of the business rather than the user, betting that people will not change it. Checkboxes for extra purchases, data sharing, or subscriptions are ticked in advance. Reliance on inertia nudges users into choices they might not make deliberately.
+
+**Kind:** Pattern · **Standard:** Deceptive Design (Dark Patterns) Taxonomy · **Source:** https://www.deceptive.design/types/preselection
+
+
+## Related
+- [[Sneaking]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/deceptive-patterns/patterns/Confirmshaming.md</span>
+            <span class="stdwhy">Why the decline option uses neutral wording, not guilt (“Not consenting … may adversely affect …” removed).</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;deceptive-patterns:confirmshaming&quot;
+label: Confirmshaming
+kind: pattern
+standard: deceptive-patterns
+standard_title: Deceptive Design (Dark Patterns) Taxonomy
+source_url: &quot;https://www.deceptive.design/types/confirmshaming&quot;
+license: reference
+domain: [6]
+ingest: reference
+---
+
+# Confirmshaming
+
+Confirmshaming uses guilt or shame in the wording of a decline option to discourage users from opting out. The dismissive choice is phrased to make people feel foolish or wrong for saying no. Emotional manipulation pressures users toward the option the business prefers.
+
+**Kind:** Pattern · **Standard:** Deceptive Design (Dark Patterns) Taxonomy · **Source:** https://www.deceptive.design/types/confirmshaming
+
+
+## Related
+- [[Trick-Wording|Trick Wording]]
+</pre>
+        </details>
+      </div>
+    </section>
+    <section class="grp" id="o2-geo-answer-engine-optimization">
+      <div class="stdgroup">
+        <h2>O2 · GEO / answer-engine optimization <span class="muted" style="font-weight:600;font-size:.8rem">· 5</span></h2>
+        
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/geo-tactics/tactics/Cite-sources.md</span>
+            <span class="stdwhy">Why the “independently validated” benchmark line now names its source.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;geo-tactics:cite-sources&quot;
+label: Cite sources
+kind: tactic
+standard: geo-tactics
+standard_title: Generative Engine Optimization tactics
+source_url: &quot;https://arxiv.org/abs/2311.09735&quot;
+license: reference
+domain: [5]
+ingest: reference
+---
+
+# Cite sources
+
+Adding citations to credible external sources for the claims made in the content. In the GEO study this was among the most effective tactics, meaningfully raising a source&#x27;s visibility in generated answers. It signals reliability that generative engines reward when composing responses.
+
+**Kind:** Tactic · **Standard:** Generative Engine Optimization tactics · **Source:** https://arxiv.org/abs/2311.09735
+
+- **effect:** improves visibility
+- **strength:** top performer
+
+## Related
+- [[Add-quotations|Add quotations]]
+- [[Add-statistics|Add statistics]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/geo-tactics/tactics/Add-statistics.md</span>
+            <span class="stdwhy">The quantified, liftable claims (75%, <1 hour, 16x, 2M) that answer engines cite.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;geo-tactics:add-statistics&quot;
+label: Add statistics
+kind: tactic
+standard: geo-tactics
+standard_title: Generative Engine Optimization tactics
+source_url: &quot;https://arxiv.org/abs/2311.09735&quot;
+license: reference
+domain: [5]
+ingest: reference
+---
+
+# Add statistics
+
+Enriching content with relevant quantitative data and statistics instead of qualitative claims alone. The study found it consistently boosted visibility across metrics and paired well with fluency optimization for peak results. It was particularly strong for law, government, and opinion-type queries.
+
+**Kind:** Tactic · **Standard:** Generative Engine Optimization tactics · **Source:** https://arxiv.org/abs/2311.09735
+
+- **effect:** improves visibility
+- **strength:** top performer
+
+## Related
+- [[Cite-sources|Cite sources]]
+- [[Add-quotations|Add quotations]]
+- [[Fluency-optimization|Fluency optimization]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/geo-tactics/tactics/Authoritative-tone.md</span>
+            <span class="stdwhy">Definitional, confident lead sentences that read as citable answers.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;geo-tactics:authoritative-tone&quot;
+label: Authoritative tone
+kind: tactic
+standard: geo-tactics
+standard_title: Generative Engine Optimization tactics
+source_url: &quot;https://arxiv.org/abs/2311.09735&quot;
+license: reference
+domain: [5]
+ingest: reference
+---
+
+# Authoritative tone
+
+Rewriting content to sound more confident and authoritative about the subject. The study reported this as a helpful, positive tactic for improving visibility in generated responses. Its impact was solid though generally below the citation, quotation, and statistics methods.
+
+**Kind:** Tactic · **Standard:** Generative Engine Optimization tactics · **Source:** https://arxiv.org/abs/2311.09735
+
+- **effect:** improves visibility
+- **strength:** moderate
+
+## Related
+- [[Add-statistics|Add statistics]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/geo-tactics/tactics/Add-quotations.md</span>
+            <span class="stdwhy">Attributed customer quotations retained as first-hand, quotable evidence.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;geo-tactics:add-quotations&quot;
+label: Add quotations
+kind: tactic
+standard: geo-tactics
+standard_title: Generative Engine Optimization tactics
+source_url: &quot;https://arxiv.org/abs/2311.09735&quot;
+license: reference
+domain: [5]
+ingest: reference
+---
+
+# Add quotations
+
+Inserting relevant quotations from experts or authoritative figures into the content. It was one of the strongest performers in the study, contributing to visibility gains of up to roughly 40 percent. It proved especially effective for explanation, history, and society-oriented queries.
+
+**Kind:** Tactic · **Standard:** Generative Engine Optimization tactics · **Source:** https://arxiv.org/abs/2311.09735
+
+- **effect:** improves visibility
+- **strength:** top performer
+
+## Related
+- [[Cite-sources|Cite sources]]
+- [[Add-statistics|Add statistics]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/google-rich-results/rich-result-types/Speakable.md</span>
+            <span class="stdwhy">The WebPage.speakable specification marking the hero + how-it-works sentences for voice/assistant surfacing.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;google-rich-results:speakable&quot;
+label: Speakable
+kind: rich-result-type
+standard: google-rich-results
+standard_title: Google-supported structured data (rich result) types
+source_url: &quot;https://developers.google.com/search/docs/appearance/structured-data/speakable&quot;
+license: reference
+domain: [5]
+ingest: reference
+---
+
+# Speakable
+
+Marks the sections of a news article best suited to being read aloud by text-to-speech assistants. It helps voice devices select concise, spoken-friendly passages. Currently a beta feature limited mainly to news content in supported languages.
+
+**Kind:** Rich Result Type · **Standard:** Google-supported structured data (rich result) types · **Source:** https://developers.google.com/search/docs/appearance/structured-data/speakable
+
+- **schema:** Speakable
+
+## Related
+- [[Article]]
+</pre>
+        </details>
+      </div>
+    </section>
+    <section class="grp" id="o3-expanded-structured-data">
+      <div class="stdgroup">
+        <h2>O3 · Expanded structured data <span class="muted" style="font-weight:600;font-size:.8rem">· 5</span></h2>
+        
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/schema-org/types/ContactPoint.md</span>
+            <span class="stdwhy">Organization.contactPoint (sales) added for a richer entity / knowledge panel.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;schema:ContactPoint&quot;
+label: ContactPoint
+kind: type
+standard: schema-org
+standard_title: Schema.org
+standard_version: 30.0
+source_url: &quot;https://schema.org/ContactPoint&quot;
+license: CC-BY-SA-3.0
+domain: [1]
+subClassOf: [StructuredValue]
+---
+
+# ContactPoint
+
+&gt; A contact point—for example, a Customer Complaints department.
+
+**Kind:** Type (`rdfs:Class`) · **Standard:** Schema.org · **Source:** https://schema.org/ContactPoint
+
+## Parent types
+- [[StructuredValue]]
+
+## Direct subtypes
+- [[PostalAddress]]
+
+## Properties (domain includes this type)
+- [[areaServed]]
+- [[availableLanguage]]
+- [[contactOption]]
+- [[contactType]]
+- [[email]]
+- [[faxNumber]]
+- [[hoursAvailable]]
+- [[productSupported]]
+- [[serviceArea]]
+- [[telephone]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/schema-org/types/Service.md</span>
+            <span class="stdwhy">A Service node (“Payroll data connectivity & reconciliation”) provided by the Organization.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;schema:Service&quot;
+label: Service
+kind: type
+standard: schema-org
+standard_title: Schema.org
+standard_version: 30.0
+source_url: &quot;https://schema.org/Service&quot;
+license: CC-BY-SA-3.0
+domain: [1]
+subClassOf: [Intangible]
+---
+
+# Service
+
+&gt; A service provided by an organization, e.g. delivery service, print services, etc.
+
+**Kind:** Type (`rdfs:Class`) · **Standard:** Schema.org · **Source:** https://schema.org/Service
+
+## Parent types
+- [[Intangible]]
+
+## Direct subtypes
+- [[BroadcastService]]
+- [[CableOrSatelliteService]]
+- [[FinancialProduct]]
+- [[FoodService]]
+- [[GovernmentService]]
+- [[Taxi]]
+- [[TaxiService]]
+- [[WebAPI]]
+
+## Properties (domain includes this type)
+- [[aggregateRating]]
+- [[areaServed]]
+- [[audience]]
+- [[availableChannel]]
+- [[award]]
+- [[brand]]
+- [[broker]]
+- [[category]]
+- [[hasCertification]]
+- [[hasOfferCatalog]]
+- [[hoursAvailable]]
+- [[isRelatedTo]]
+- [[isSimilarTo]]
+- [[logo]]
+- [[offers]]
+- [[produces]]
+- [[provider]]
+- [[providerMobility]]
+- [[review]]
+- [[serviceArea]]
+- [[serviceAudience]]
+- [[serviceOutput]]
+- [[serviceType]]
+- [[slogan]]
+- [[termsOfService]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/schema-org/types/Offer.md</span>
+            <span class="stdwhy">The Offer on the SoftwareApplication (licensing quoted separately).</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;schema:Offer&quot;
+label: Offer
+kind: type
+standard: schema-org
+standard_title: Schema.org
+standard_version: 30.0
+source_url: &quot;https://schema.org/Offer&quot;
+license: CC-BY-SA-3.0
+domain: [1]
+subClassOf: [Intangible]
+---
+
+# Offer
+
+&gt; An offer to transfer some rights to an item or to provide a service — for example, an offer to sell tickets to an event, to rent the DVD of a movie, to stream a TV show over the internet, to repair a motorcycle, or to loan a book.\n\nNote: As the [[businessFunction]] property, which identifies the form of offer (e.g. sell, lease, repair, dispose), defaults to http://purl.org/goodrelations/v1#Sell; an Offer without a defined businessFunction value can be assumed to be an offer to sell.\n\nFor [GTIN](http://www.gs1.org/barcodes/technical/idkeys/gtin)-related fields, see [Check Digit calculator](http://www.gs1.org/barcodes/support/check_digit_calculator) and [validation guide](http://www.gs1us.org/resources/standards/gtin-validation-guide) from [GS1](http://www.gs1.org/).
+
+**Kind:** Type (`rdfs:Class`) · **Standard:** Schema.org · **Source:** https://schema.org/Offer
+
+## Parent types
+- [[Intangible]]
+
+## Direct subtypes
+- [[AggregateOffer]]
+- [[OfferForLease]]
+- [[OfferForPurchase]]
+
+## Properties (domain includes this type)
+- [[acceptedPaymentMethod]]
+- [[addOn]]
+- [[additionalProperty]]
+- [[advanceBookingRequirement]]
+- [[aggregateRating]]
+- [[areaServed]]
+- [[asin]]
+- [[availability]]
+- [[availabilityEnds]]
+- [[availabilityStarts]]
+- [[availableAtOrFrom]]
+- [[availableDeliveryMethod]]
+- [[businessFunction]]
+- [[category]]
+- [[checkoutPageURLTemplate]]
+- [[deliveryLeadTime]]
+- [[eligibleCustomerType]]
+- [[eligibleDuration]]
+- [[eligibleQuantity]]
+- [[eligibleRegion]]
+- [[eligibleTransactionVolume]]
+- [[gtin]]
+- [[gtin12]]
+- [[gtin13]]
+- [[gtin14]]
+- [[gtin8]]
+- [[hasAdultConsideration]]
+- [[hasGS1DigitalLink]]
+- [[hasMeasurement]]
+- [[hasMerchantReturnPolicy]]
+- [[includesObject]]
+- [[ineligibleRegion]]
+- [[inventoryLevel]]
+- [[isFamilyFriendly]]
+- [[itemCondition]]
+- [[itemOffered]]
+- [[leaseLength]]
+- [[mobileUrl]]
+- [[mpn]]
+- [[offeredBy]]
+- [[price]]
+- [[priceCurrency]]
+- [[priceSpecification]]
+- [[priceValidUntil]]
+- [[review]]
+- [[reviews]]
+- [[seller]]
+- [[serialNumber]]
+- [[shippingDetails]]
+- [[sku]]
+- [[validForMemberTier]]
+- [[validFrom]]
+- [[validThrough]]
+- [[warranty]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/schema-org/types/SearchAction.md</span>
+            <span class="stdwhy">WebSite.potentialAction SearchAction — eligible for a sitelinks search box.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;schema:SearchAction&quot;
+label: SearchAction
+kind: type
+standard: schema-org
+standard_title: Schema.org
+standard_version: 30.0
+source_url: &quot;https://schema.org/SearchAction&quot;
+license: CC-BY-SA-3.0
+domain: [1]
+subClassOf: [Action]
+---
+
+# SearchAction
+
+&gt; The act of searching for an object.\n\nRelated actions:\n\n* [[FindAction]]: SearchAction generally leads to a FindAction, but not necessarily.
+
+**Kind:** Type (`rdfs:Class`) · **Standard:** Schema.org · **Source:** https://schema.org/SearchAction
+
+## Parent types
+- [[Action]]
+
+## Properties (domain includes this type)
+- [[query]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/schema-org/types/ImageObject.md</span>
+            <span class="stdwhy">The hero graphic modelled as an ImageObject carrying provenance fields (see O5).</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;schema:ImageObject&quot;
+label: ImageObject
+kind: type
+standard: schema-org
+standard_title: Schema.org
+standard_version: 30.0
+source_url: &quot;https://schema.org/ImageObject&quot;
+license: CC-BY-SA-3.0
+domain: [1]
+subClassOf: [MediaObject]
+---
+
+# ImageObject
+
+&gt; An image file.
+
+**Kind:** Type (`rdfs:Class`) · **Standard:** Schema.org · **Source:** https://schema.org/ImageObject
+
+## Parent types
+- [[MediaObject]]
+
+## Direct subtypes
+- [[Barcode]]
+- [[ImageObjectSnapshot]]
+
+## Properties (domain includes this type)
+- [[caption]]
+- [[embeddedTextCaption]]
+- [[exifData]]
+- [[representativeOfPage]]
+</pre>
+        </details>
+      </div>
+    </section>
+    <section class="grp" id="o4-accessibility-conformance-vpat">
+      <div class="stdgroup">
+        <h2>O4 · Accessibility conformance (VPAT) <span class="muted" style="font-weight:600;font-size:.8rem">· 3</span></h2>
+        
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/vpat/sections/Conformance-levels.md</span>
+            <span class="stdwhy">The Supports / Partially / Does-not-support vocabulary used in accessibility.html.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;vpat:conformance-levels&quot;
+label: Conformance levels
+kind: section
+standard: vpat
+standard_title: VPAT / Accessibility Conformance Report
+source_url: &quot;https://www.section508.gov/sell/how-to-create-acr-with-vpat/&quot;
+license: reference
+domain: [3]
+ingest: reference
+---
+
+# Conformance levels
+
+Each criterion is rated with one of a fixed set of terms: Supports when at least one method meets it without known defects, Partially Supports when some functionality does not meet it, and Does Not Support when most functionality fails it. Not Applicable marks criteria irrelevant to the product, while Not Evaluated may be used only for the WCAG Level AAA table. Every rating is paired with a remarks and explanations column giving the supporting detail.
+
+**Kind:** Section · **Standard:** VPAT / Accessibility Conformance Report · **Source:** https://www.section508.gov/sell/how-to-create-acr-with-vpat/
+
+- **part:** terms
+
+## Related
+- [[Report-introduction|Report introduction]]
+- [[Perceivable-table|Perceivable table]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/en-301-549/clauses/Clause-11-Software.md</span>
+            <span class="stdwhy">The EU ICT accessibility clause the statement claims against alongside WCAG 2.2 AA.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;en-301-549:clause-11-software&quot;
+label: Clause 11 Software
+kind: clause
+standard: en-301-549
+standard_title: EN 301 549
+source_url: &quot;https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf&quot;
+license: reference
+domain: [3]
+ingest: reference
+---
+
+# Clause 11 Software
+
+Applies WCAG-derived success criteria to non-web software and adds software-specific requirements for interoperability with assistive technology and user preferences. It covers desktop and mobile applications. Exposing accessibility information to platform services is a key theme.
+
+**Kind:** Clause · **Standard:** EN 301 549 · **Source:** https://www.etsi.org/deliver/etsi_en/301500_301599/301549/03.02.01_60/en_301549v030201p.pdf
+
+- **clause:** 11
+
+## Related
+- [[Clause-9-Web|Clause 9 Web]]
+- [[Clause-10-Non-web-documents|Clause 10 Non-web documents]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/section-508/provisions/Chapter-5-software.md</span>
+            <span class="stdwhy">The US Section 508 software provisions a full VPAT edition would also cover.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;section-508:chapter-5-software&quot;
+label: Chapter 5 software
+kind: provision
+standard: section-508
+standard_title: Revised Section 508 Standards
+source_url: &quot;https://www.access-board.gov/ict/#chapter-5-software&quot;
+license: US-Gov-PublicDomain
+domain: [3]
+ingest: reference
+---
+
+# Chapter 5 software
+
+Sets technical requirements for software, including interoperability with assistive technology and support for platform accessibility services. It covers applications and authoring tools. Non-web software also draws on WCAG 2.0 success criteria applied to software.
+
+**Kind:** Provision · **Standard:** Revised Section 508 Standards · **Source:** https://www.access-board.gov/ict/#chapter-5-software
+
+- **chapter:** 5
+
+## Related
+- [[Chapter-4-hardware|Chapter 4 hardware]]
+- [[WCAG-2.0-incorporation|WCAG 2.0 incorporation]]
+</pre>
+        </details>
+      </div>
+    </section>
+    <section class="grp" id="o5-content-provenance-on-media">
+      <div class="stdgroup">
+        <h2>O5 · Content provenance on media <span class="muted" style="font-weight:600;font-size:.8rem">· 6</span></h2>
+        
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/c2pa/concepts/Content-Credentials.md</span>
+            <span class="stdwhy">The Content Credentials manifest that should be embedded in the hero asset at export.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;c2pa:content-credentials&quot;
+label: Content Credentials
+kind: concept
+standard: c2pa
+standard_title: C2PA Content Provenance
+source_url: &quot;https://contentcredentials.org/&quot;
+license: reference
+domain: [10]
+ingest: reference
+---
+
+# Content Credentials
+
+Content Credentials is the user-facing brand and presentation layer for C2PA provenance data, shown through a recognizable icon and detail panel. It lets people inspect who made a piece of media and how it was altered. The name and its symbol give the technical standard a consistent public identity.
+
+**Kind:** Concept · **Standard:** C2PA Content Provenance · **Source:** https://contentcredentials.org/
+
+- **category:** presentation
+
+## Related
+- [[Manifest]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/c2pa/concepts/Assertion.md</span>
+            <span class="stdwhy">The signed assertions (creator, actions) a C2PA manifest carries.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;c2pa:assertion&quot;
+label: Assertion
+kind: concept
+standard: c2pa
+standard_title: C2PA Content Provenance
+source_url: &quot;https://c2pa.org/specifications/specifications/2.1/specs/C2PA_Specification.html&quot;
+license: reference
+domain: [10]
+ingest: reference
+---
+
+# Assertion
+
+An assertion is an individual statement about the content, such as who created it, what edits were applied, or which capture device was used. Assertions are the granular building blocks of provenance that a claim collects and signs. Each one describes a specific fact about the asset.
+
+**Kind:** Concept · **Standard:** C2PA Content Provenance · **Source:** https://c2pa.org/specifications/specifications/2.1/specs/C2PA_Specification.html
+
+- **category:** structure
+
+## Related
+- [[Claim]]
+- [[Ingredient]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/iptc-photo-metadata/properties/Creator.md</span>
+            <span class="stdwhy">Mapped to ImageObject.creator on the hero graphic.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;iptc-photo-metadata:creator&quot;
+label: Creator
+kind: property
+standard: iptc-photo-metadata
+standard_title: IPTC Photo Metadata Standard
+source_url: &quot;https://www.iptc.org/std/photometadata/documentation/userguide/&quot;
+license: reference
+domain: [10]
+ingest: reference
+---
+
+# Creator
+
+The Creator property identifies the person or organization that made the image, such as the photographer or illustrator. It is the primary attribution field for authorship and underpins credit and rights management. Multiple creators can be listed where a work has more than one author.
+
+**Kind:** Property · **Standard:** IPTC Photo Metadata Standard · **Source:** https://www.iptc.org/std/photometadata/documentation/userguide/
+
+- **type:** property
+
+## Related
+- [[Credit-Line|Credit Line]]
+- [[Copyright-Notice|Copyright Notice]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/iptc-photo-metadata/properties/Credit-Line.md</span>
+            <span class="stdwhy">Mapped to ImageObject.creditText.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;iptc-photo-metadata:credit-line&quot;
+label: Credit Line
+kind: property
+standard: iptc-photo-metadata
+standard_title: IPTC Photo Metadata Standard
+source_url: &quot;https://www.iptc.org/std/photometadata/documentation/userguide/&quot;
+license: reference
+domain: [10]
+ingest: reference
+---
+
+# Credit Line
+
+The Credit Line is a short, free-text acknowledgement of how the image should be credited when published, for example an agency or photographer byline. It reflects contractual or editorial credit requirements rather than legal ownership. Publishers typically reproduce it verbatim alongside the image.
+
+**Kind:** Property · **Standard:** IPTC Photo Metadata Standard · **Source:** https://www.iptc.org/std/photometadata/documentation/userguide/
+
+- **type:** property
+
+## Related
+- [[Creator]]
+- [[Copyright-Notice|Copyright Notice]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/iptc-photo-metadata/properties/Copyright-Notice.md</span>
+            <span class="stdwhy">Mapped to ImageObject.copyrightNotice.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;iptc-photo-metadata:copyright-notice&quot;
+label: Copyright Notice
+kind: property
+standard: iptc-photo-metadata
+standard_title: IPTC Photo Metadata Standard
+source_url: &quot;https://www.iptc.org/std/photometadata/documentation/userguide/&quot;
+license: reference
+domain: [10]
+ingest: reference
+---
+
+# Copyright Notice
+
+The Copyright Notice is a free-text statement asserting the copyright status and owner of the image, often including a year and rights-holder name. It communicates the legal claim over the work to anyone inspecting the file. It complements, rather than replaces, machine-readable rights fields.
+
+**Kind:** Property · **Standard:** IPTC Photo Metadata Standard · **Source:** https://www.iptc.org/std/photometadata/documentation/userguide/
+
+- **type:** property
+
+## Related
+- [[Web-Statement-of-Rights|Web Statement of Rights]]
+- [[Licensor]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/iptc-photo-metadata/properties/Description-Caption.md</span>
+            <span class="stdwhy">Mapped to ImageObject.caption + the img alt text.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;iptc-photo-metadata:description&quot;
+label: Description (Caption)
+kind: property
+standard: iptc-photo-metadata
+standard_title: IPTC Photo Metadata Standard
+source_url: &quot;https://www.iptc.org/std/photometadata/documentation/userguide/&quot;
+license: reference
+domain: [10]
+ingest: reference
+---
+
+# Description (Caption)
+
+The Description, historically called the caption, is a textual account of what the image depicts, including the who, what, when, and where. It supports search, accessibility, and editorial reuse of the image. It is one of the most widely populated descriptive fields in the standard.
+
+**Kind:** Property · **Standard:** IPTC Photo Metadata Standard · **Source:** https://www.iptc.org/std/photometadata/documentation/userguide/
+
+- **type:** property
+
+## Related
+- [[Headline]]
+- [[Keywords]]
+</pre>
+        </details>
+      </div>
+    </section>
+    <section class="grp" id="o6-inp-lighthouse-readability">
+      <div class="stdgroup">
+        <h2>O6 · INP, Lighthouse &amp; readability <span class="muted" style="font-weight:600;font-size:.8rem">· 3</span></h2>
+        
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/core-web-vitals/metrics/Interaction-to-Next-Paint-INP.md</span>
+            <span class="stdwhy">Why the tab/carousel/ROI handlers use passive listeners and avoid layout thrash.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;core-web-vitals:inp&quot;
+label: Interaction to Next Paint (INP)
+kind: metric
+standard: core-web-vitals
+standard_title: &quot;Core Web Vitals &amp; Web Vitals metrics&quot;
+source_url: &quot;https://web.dev/articles/inp&quot;
+license: reference
+domain: [4]
+ingest: reference
+---
+
+# Interaction to Next Paint (INP)
+
+INP observes every tap, click, and key press across the whole page visit and reports a value near the worst latency between the interaction and the next frame painted in response. It is the Core Web Vital for overall responsiveness, having replaced First Input Delay in 2024. High INP points to long JavaScript tasks blocking the main thread.
+
+**Kind:** Metric · **Standard:** Core Web Vitals &amp; Web Vitals metrics · **Source:** https://web.dev/articles/inp
+
+- **good:** &lt;200ms
+- **needs_improvement:** 200ms-500ms
+- **poor:** &gt;500ms
+- **measures:** interactivity / responsiveness
+- **type:** core
+
+## Related
+- [[Total-Blocking-Time-TBT|Total Blocking Time (TBT)]]
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/lighthouse/audits/unused-javascript.md</span>
+            <span class="stdwhy">The build ships one small inline script — no framework/unused JS to flag.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;lighthouse:unused-javascript&quot;
+label: Reduce unused JavaScript
+kind: audit
+standard: lighthouse
+standard_title: Lighthouse audits
+source_url: &quot;https://github.com/GoogleChrome/lighthouse/blob/main/core/audits/byte-efficiency/unused-javascript.js&quot;
+license: Apache-2.0
+domain: [4]
+ingest: full
+category: performance
+---
+
+# Reduce unused JavaScript
+
+&gt; Reduce unused JavaScript and defer loading scripts until they are required to decrease bytes consumed by network activity. [Learn how to reduce unused JavaScript](https://developer.chrome.com/docs/lighthouse/performance/unused-javascript/).
+
+**Kind:** Audit · **Standard:** Lighthouse audits · **Category:** performance · **Audit id:** `unused-javascript`
+</pre>
+        </details>
+        <details class="std">
+          <summary>
+            <span class="stdpath">standards/readability-formulas/formulas/Automated-Readability-Index-ARI.md</span>
+            <span class="stdwhy">The lens for a future copy pass on dense sentences (e.g. the Workday-GPC paragraph), kept verbatim for now.</span>
+          </summary>
+          <pre class="stdtext">---
+id: &quot;readability-formulas:ari&quot;
+label: Automated Readability Index (ARI)
+kind: formula
+standard: readability-formulas
+standard_title: Readability Formulas
+source_url: &quot;https://en.wikipedia.org/wiki/Automated_readability_index&quot;
+license: PublicDomain
+domain: [7]
+ingest: reference
+---
+
+# Automated Readability Index (ARI)
+
+Produces a grade level from characters per word and words per sentence, again sidestepping syllable counting. Designed for real-time machine scoring on typewriters, it responds directly to the character count of the text. Its output maps to a US grade rather than an age band.
+
+**Kind:** Formula · **Standard:** Readability Formulas · **Source:** https://en.wikipedia.org/wiki/Automated_readability_index
+
+- **formula:** 4.71 x (characters/words) + 0.5 x (words/sentences) - 21.43
+- **inputs:** characters, words, sentences
+- **output:** US grade level
+
+## Related
+- [[Coleman-Liau-Index|Coleman-Liau Index]]
+</pre>
+        </details>
+      </div>
+    </section></div>
+  </main>
+  <footer class="pg"><div class="wrap">datascalehr homepage review · standards provenance appendix · 95 object files</div></footer>
+  <script>
+    document.querySelectorAll('[data-all]').forEach(function(b){
+      b.addEventListener('click',function(){
+        var open=b.dataset.all==='open';
+        document.querySelectorAll('details.std').forEach(function(d){d.open=open;});
+      });
+    });
+  </script>
+</body>
+</html>

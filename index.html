@@ -1,0 +1,391 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>datascalehr Homepage — Standards Review Hub</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@400;500;600;700;800&display=swap">
+  <style>
+    :root{
+      color-scheme: light dark;
+      --brand:#00a2ff; --brand-ink:#0077cc;
+      --ink:#12141a; --ink-2:#4a5262;
+      --bg:#0b0e14; --panel:#11151f; --card:#161c28; --line:#243040;
+      --pos:#1ec98b; --neg:#ff6b6b;
+      --radius:16px; --font:"Lexend Deca",system-ui,-apple-system,Segoe UI,Roboto,sans-serif;
+      --maxw:1240px;
+    }
+    *,*::before,*::after{box-sizing:border-box}
+    body{margin:0;font-family:var(--font);background:var(--bg);color:#eaf0f7;line-height:1.6;-webkit-font-smoothing:antialiased}
+    a{color:var(--brand)}
+    h1,h2,h3{line-height:1.12;letter-spacing:-.02em;margin:0;font-weight:800}
+    .wrap{max-width:var(--maxw);margin-inline:auto;padding-inline:clamp(1rem,4vw,2rem)}
+    .muted{color:#9aa7b8}
+    .eyebrow{text-transform:uppercase;letter-spacing:.14em;font-size:.72rem;font-weight:700;color:var(--brand)}
+
+    /* Top bar */
+    header.hub{position:sticky;top:0;z-index:20;background:rgba(11,14,20,.82);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+    .bar{display:flex;align-items:center;gap:1rem;min-height:64px}
+    .logo{display:inline-flex;align-items:center;gap:.5rem;font-weight:800;font-size:1.15rem;color:#fff;text-decoration:none}
+    .logo svg{width:24px;height:24px}
+    .logo .hr{color:var(--brand)}
+    .tag{margin-left:.4rem;font-size:.7rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:#7f8da0;border:1px solid var(--line);padding:.25rem .55rem;border-radius:999px}
+    .bar .spacer{margin-left:auto}
+    .bar a.src{color:#9aa7b8;text-decoration:none;font-size:.85rem;font-weight:600}
+    .bar a.src:hover{color:#fff}
+
+    /* Hero */
+    .hero{padding:clamp(2.5rem,6vw,4.5rem) 0 1.5rem;text-align:center}
+    .hero h1{font-size:clamp(2rem,4.5vw,3.4rem)}
+    .hero h1 .accent{color:var(--brand)}
+    .hero p.lead{max-width:60ch;margin:1rem auto 0;color:#c2ccd9;font-size:clamp(1.02rem,1.6vw,1.2rem)}
+    .scorerow{display:flex;flex-wrap:wrap;gap:.7rem;justify-content:center;margin-top:1.8rem}
+    .chip{display:inline-flex;align-items:center;gap:.5rem;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.5rem .9rem;font-size:.85rem;font-weight:600}
+    .chip b{color:var(--pos)}
+    .chip .arrow{color:#6b7688}
+
+    /* Compare */
+    section{padding-block:clamp(2rem,5vw,3.5rem)}
+    .section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:1rem;flex-wrap:wrap;margin-bottom:1.2rem}
+    .section-head h2{font-size:clamp(1.4rem,2.6vw,2rem)}
+    .segmented{display:inline-flex;background:var(--card);border:1px solid var(--line);border-radius:999px;padding:4px;gap:2px}
+    .segmented button{appearance:none;border:0;background:transparent;color:#c2ccd9;font:inherit;font-weight:600;font-size:.9rem;padding:.5rem 1rem;border-radius:999px;cursor:pointer;min-height:40px}
+    .segmented button[aria-pressed="true"]{background:var(--brand);color:#04121f}
+    .controls{display:flex;gap:1rem 1.2rem;flex-wrap:wrap;align-items:center}
+    .theme-ctl{display:inline-flex;align-items:center;gap:.55rem}
+    .ctl-label{font-size:.78rem;font-weight:600;color:#9aa7b8}
+    .frames{display:grid;gap:1rem;grid-template-columns:1fr 1fr;align-items:start}
+    .frames.solo{grid-template-columns:1fr}
+    .frame{background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;box-shadow:0 10px 40px rgba(0,0,0,.35)}
+    .frame.hidden{display:none}
+    .frame .cap{display:flex;align-items:center;gap:.5rem;padding:.6rem .9rem;border-bottom:1px solid var(--line);font-size:.82rem;font-weight:700;letter-spacing:.02em}
+    .dot{width:10px;height:10px;border-radius:50%}
+    .frame.before .dot{background:var(--neg)}
+    .frame.after .dot{background:var(--pos)}
+    .frame .cap .url{margin-left:auto;color:#7f8da0;font-weight:500;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.72rem}
+    .frame .cap .open{flex:none;color:var(--brand);text-decoration:none;font-weight:700;font-size:.75rem;border:1px solid var(--line);border-radius:999px;padding:.25rem .6rem;white-space:nowrap}
+    .frame .cap .open:hover{border-color:var(--brand);background:color-mix(in srgb,var(--brand) 14%,transparent)}
+    @media (max-width:520px){.frame .cap .url{display:none}}
+    .frame iframe{width:100%;height:70vh;min-height:520px;border:0;background:#fff;display:block}
+    .hint{margin-top:.7rem;font-size:.8rem;color:#7f8da0;text-align:center}
+
+    /* Defects callout */
+    .defects{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(280px,1fr))}
+    .defect{background:var(--card);border:1px solid var(--line);border-left:3px solid var(--neg);border-radius:12px;padding:1.1rem 1.2rem}
+    .defect h3{font-size:1rem;margin-bottom:.4rem}
+    .defect .ba{display:grid;gap:.4rem;margin-top:.7rem;font-size:.85rem}
+    .defect .ba div{display:flex;gap:.5rem;align-items:baseline}
+    .defect .ba .k{width:52px;flex:none;font-weight:700;font-size:.68rem;letter-spacing:.08em;text-transform:uppercase}
+    .defect .ba .before .k{color:var(--neg)}
+    .defect .ba .after .k{color:var(--pos)}
+    .defect code{background:#0b1119;border:1px solid var(--line);border-radius:6px;padding:.05rem .35rem;font-size:.82em}
+
+    /* Improvements by domain */
+    .domains{display:grid;gap:1rem;grid-template-columns:repeat(auto-fit,minmax(320px,1fr))}
+    .dcard{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:1.3rem 1.4rem}
+    .dcard .dhead{display:flex;align-items:center;gap:.7rem;margin-bottom:.9rem}
+    .dnum{width:34px;height:34px;flex:none;border-radius:9px;background:linear-gradient(135deg,var(--brand),#0077cc);color:#04121f;font-weight:800;display:grid;place-items:center;font-size:.95rem}
+    .dcard h3{font-size:1.05rem}
+    .dcard ul{list-style:none;margin:0;padding:0;display:grid;gap:.55rem}
+    .dcard li{position:relative;padding-left:1.5rem;font-size:.9rem;color:#c8d2df}
+    .dcard li::before{content:"";position:absolute;left:0;top:.42em;width:9px;height:9px;border-radius:50%;background:var(--pos);box-shadow:0 0 0 3px rgba(30,201,139,.15)}
+    .dcard li b{color:#fff;font-weight:700}
+
+    /* Standards appendix */
+    .stdgroups{display:grid;gap:1.4rem}
+    .stdgroup>h3{font-size:1.05rem;margin-bottom:.7rem;padding-bottom:.5rem;border-bottom:1px solid var(--line);color:#fff}
+    details.std{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:.6rem;overflow:hidden}
+    details.std[open]{border-color:var(--brand-ink)}
+    details.std>summary{list-style:none;cursor:pointer;padding:.85rem 1rem;display:grid;gap:.3rem}
+    details.std>summary::-webkit-details-marker{display:none}
+    details.std>summary::before{content:"▸ ";color:var(--brand)}
+    details.std[open]>summary::before{content:"▾ "}
+    .stdpath{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.82rem;color:var(--brand);font-weight:600;word-break:break-all}
+    .stdwhy{font-size:.86rem;color:#c8d2df;line-height:1.5}
+    .stdwhy code{background:#0b1119;border:1px solid var(--line);border-radius:5px;padding:.02rem .3rem;font-size:.85em}
+    pre.stdtext{margin:0;padding:1rem 1.1rem;border-top:1px solid var(--line);background:#0a0e15;color:#c8d2df;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.78rem;line-height:1.55;white-space:pre-wrap;word-wrap:break-word;overflow-x:auto;max-height:520px;overflow-y:auto}
+    .btn-appendix{display:inline-flex;align-items:center;gap:.4rem;background:var(--brand);color:#04121f;font-weight:700;text-decoration:none;border-radius:999px;padding:.75rem 1.3rem;min-height:48px}
+    .btn-appendix:hover{filter:brightness(1.05)}
+    .toc-preview{display:flex;flex-wrap:wrap;gap:.5rem;margin-top:1.4rem}
+    .toc-preview a{background:var(--card);border:1px solid var(--line);border-radius:999px;padding:.4rem .8rem;font-size:.8rem;font-weight:600;color:#9aa7b8;text-decoration:none;white-space:nowrap}
+    .toc-preview a:hover{border-color:var(--brand);color:#fff}
+    .toc-preview a b{color:var(--brand)}
+    footer.hub{border-top:1px solid var(--line);padding-block:2rem;color:#7f8da0;font-size:.85rem}
+    .foot{display:flex;flex-wrap:wrap;gap:.6rem 1.2rem;align-items:center;justify-content:space-between}
+    @media (max-width:840px){.frames{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+  <header class="hub">
+    <div class="wrap bar">
+      <a class="logo" href="#top">
+        <svg viewBox="0 0 32 32" aria-hidden="true"><rect x="13" y="4" width="6" height="24" rx="3" fill="#00a2ff"/><rect x="4" y="13" width="24" height="6" rx="3" fill="#00a2ff"/></svg>
+        <span>datascale<span class="hr">hr</span></span>
+      </a>
+      <span class="tag">Review Hub</span>
+      <span class="spacer"></span>
+      <a class="src" href="https://datascalehr.com/" target="_blank" rel="noopener">Live site ↗</a>
+    </div>
+  </header>
+
+  <main id="top">
+    <div class="wrap">
+      <section class="hero">
+        <p class="eyebrow">Homepage · Standards Improvement</p>
+        <h1>The same page, rebuilt <span class="accent">to standard.</span></h1>
+        <p class="lead">Every word and the visual identity are preserved. What changed is everything a browser, a screen reader, and a search or answer engine actually read. Compare the two states below, then see the full list of fixes.</p>
+        <div class="scorerow">
+          <span class="chip"><span class="muted">&lt;h1&gt;s</span> <span>4 stat numbers</span> <span class="arrow">→</span> <b>1 headline</b></span>
+          <span class="chip"><span class="muted">Structured data</span> <span>none</span> <span class="arrow">→</span> <b>7 schema types</b></span>
+          <span class="chip"><span class="muted">Images missing alt</span> <span>—</span> <span class="arrow">→</span> <b>0</b></span>
+          <span class="chip"><span class="muted">Theme</span> <span>light only</span> <span class="arrow">→</span> <b>light + dark</b></span>
+        </div>
+      </section>
+    </div>
+
+    <div class="wrap">
+      <section aria-labelledby="cmp-title">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">Before / After</p>
+            <h2 id="cmp-title">Live comparison</h2>
+          </div>
+          <div class="controls">
+            <div class="segmented" role="group" aria-label="Comparison view">
+              <button type="button" data-view="split" aria-pressed="true">Side by side</button>
+              <button type="button" data-view="before" aria-pressed="false">Before</button>
+              <button type="button" data-view="after" aria-pressed="false">After</button>
+            </div>
+            <div class="theme-ctl">
+              <span class="ctl-label">Improved&nbsp;site theme</span>
+              <div class="segmented" role="group" aria-label="Improved site theme">
+                <button type="button" data-theme="auto" aria-pressed="true">Auto</button>
+                <button type="button" data-theme="light" aria-pressed="false">Light</button>
+                <button type="button" data-theme="dark" aria-pressed="false">Dark</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="frames" id="frames">
+          <div class="frame before" id="f-before">
+            <div class="cap"><span class="dot"></span> Before — original <span class="url">datascalehr.com</span><a class="open" href="before/index.html" target="_blank" rel="noopener" aria-label="Open the original page full screen in a new tab">Full screen ↗</a></div>
+            <iframe title="Original datascalehr homepage" loading="lazy" src="before/index.html"></iframe>
+          </div>
+          <div class="frame after" id="f-after">
+            <div class="cap"><span class="dot"></span> After — standards rebuild <span class="url">datascalehr-homepage-improved.html</span><a class="open" href="after/index.html" target="_blank" rel="noopener" aria-label="Open the standards rebuild full screen in a new tab">Full screen ↗</a></div>
+            <iframe title="Improved datascalehr homepage" loading="lazy" src="after/index.html"></iframe>
+          </div>
+        </div>
+        <p class="hint">Both panes are the real, scrollable pages served locally. The rebuild renders in your system light/dark theme; toggle your OS theme to see dark mode.</p>
+      </section>
+    </div>
+
+    <div class="wrap">
+      <section aria-labelledby="def-title">
+        <p class="eyebrow">The headline fixes</p>
+        <h2 id="def-title" style="margin-bottom:1.2rem">Three concrete defects the standards caught</h2>
+        <div class="defects">
+          <article class="defect">
+            <h3>Meaningless heading structure</h3>
+            <p class="muted" style="font-size:.9rem">The only four <code>&lt;h1&gt;</code>s on the page were stat numbers; the actual headline was not a heading at all.</p>
+            <div class="ba">
+              <div class="before"><span class="k">Before</span><span><code>&lt;h1&gt;2M+&lt;/h1&gt;</code> ×4 (180+, 1,100+, 100%)</span></div>
+              <div class="after"><span class="k">After</span><span>One <code>&lt;h1&gt;</code>: “Payroll data is a mess. We fix that.”</span></div>
+            </div>
+          </article>
+          <article class="defect">
+            <h3>Leaked blog metadata</h3>
+            <p class="muted" style="font-size:.9rem">The homepage’s Twitter card carried a blog post’s byline and read-time.</p>
+            <div class="ba">
+              <div class="before"><span class="k">Before</span><span><code>twitter:data1 = "Jerome Gouvernel"</code>, <code>"21 minutes"</code></span></div>
+              <div class="after"><span class="k">After</span><span>Correct card: title, description, image — no leakage</span></div>
+            </div>
+          </article>
+          <article class="defect">
+            <h3>No sharing image / structured data</h3>
+            <p class="muted" style="font-size:.9rem">Missing <code>og:image</code> and no clean homepage schema for rich results / AI answers.</p>
+            <div class="ba">
+              <div class="before"><span class="k">Before</span><span>No <code>og:image</code>; no Organization / FAQ / Review schema</span></div>
+              <div class="after"><span class="k">After</span><span><code>og:image</code> + JSON-LD graph (7 types)</span></div>
+            </div>
+          </article>
+        </div>
+      </section>
+    </div>
+
+    <div class="wrap">
+      <section aria-labelledby="imp-title">
+        <p class="eyebrow">Full changelog</p>
+        <h2 id="imp-title" style="margin-bottom:1.2rem">Every improvement, by quality domain</h2>
+        <div class="domains">
+
+          <div class="dcard">
+            <div class="dhead"><span class="dnum">1</span><h3>Semantic Web &amp; Structured Data</h3></div>
+            <ul>
+              <li>Added a full JSON-LD <b>@graph</b>: <b>Organization</b>, <b>WebSite</b>, <b>WebPage</b>, <b>ImageObject</b>, <b>Service</b>, <b>SoftwareApplication</b>, <b>FAQPage</b>.</li>
+              <li><b>AggregateRating</b> + all 5 customer <b>Review</b> objects with author attribution.</li>
+              <li>Four solution tabs re-expressed as an <b>FAQPage</b> — liftable by Google &amp; AI answer engines.</li>
+            </ul>
+          </div>
+
+          <div class="dcard">
+            <div class="dhead"><span class="dnum">2</span><h3>Web Platform &amp; Semantic HTML</h3></div>
+            <ul>
+              <li>Valid <code>&lt;!doctype&gt;</code>, real landmark tree: <b>header / nav / main / section / footer</b>.</li>
+              <li>Single H1, then ordered <b>H2 → H3</b> hierarchy across every section.</li>
+              <li><b>&lt;blockquote&gt;</b> + <b>&lt;figcaption&gt;</b> for testimonials; <b>&lt;dl&gt;</b> for stat pairs.</li>
+            </ul>
+          </div>
+
+          <div class="dcard">
+            <div class="dhead"><span class="dnum">3</span><h3>Accessibility — WCAG 2.2 / ARIA APG</h3></div>
+            <ul>
+              <li><b>Skip link</b> + visible <b>:focus-visible</b> rings (2.4.7 / 2.4.11).</li>
+              <li>Solution tabs use the <b>ARIA tabs pattern</b> with arrow / Home / End keys.</li>
+              <li>All targets ≥ <b>44px</b> (2.5.8); <b>aria-labels</b> on icon controls; <b>0</b> images missing alt.</li>
+              <li>Respects <b>prefers-reduced-motion</b>.</li>
+            </ul>
+          </div>
+
+          <div class="dcard">
+            <div class="dhead"><span class="dnum">4</span><h3>Performance — Core Web Vitals</h3></div>
+            <ul>
+              <li>Font <b>preconnect</b> + <b>display:swap</b>; system-font fallback prevents invisible text.</li>
+              <li>All-inline CSS, minimal dependency-free JS — no render-blocking chain.</li>
+              <li>Layout reserves space to avoid <b>CLS</b>; below-fold iframes lazy-loaded.</li>
+            </ul>
+          </div>
+
+          <div class="dcard">
+            <div class="dhead"><span class="dnum">5</span><h3>Search, SEO &amp; GEO / E-E-A-T</h3></div>
+            <ul>
+              <li>De-duplicated <b>&lt;title&gt;</b>, real meta description, <b>canonical</b>, robots directives.</li>
+              <li>Corrected <b>Open Graph</b> (with image) and <b>Twitter card</b> — removed leaked blog data.</li>
+              <li>Review attribution + benchmarked, “independently validated” metrics kept as trust signals.</li>
+            </ul>
+          </div>
+
+          <div class="dcard">
+            <div class="dhead"><span class="dnum">6</span><h3>Design Systems &amp; UX</h3></div>
+            <ul>
+              <li>CSS <b>custom-property design tokens</b> (color, space, type, radius, shadow).</li>
+              <li>Fluid <b>clamp()</b> type scale; Gestalt grouping of related content.</li>
+              <li>Full <b>prefers-color-scheme dark mode</b> — the original was light-only.</li>
+            </ul>
+          </div>
+
+          <div class="dcard">
+            <div class="dhead"><span class="dnum">7</span><h3>Content &amp; Editorial</h3></div>
+            <ul>
+              <li>Core body copy (hero, testimonials, solution tabs, results, how-it-works) kept <b>verbatim</b> — same message, same voice.</li>
+              <li>Consistent punctuation (en-dashes, curly quotes) and sentence-case headings.</li>
+              <li>Deliberate editorial changes at your direction: a funnel of a soft <b>“Learn More”</b> hero CTA → a hard <b>“Request a Meeting”</b> close, plus an added benchmark <b>source line</b>.</li>
+              <li>Sections intentionally re-sequenced (ROI calculator moved <b>mid-page</b>); the original bottom calculator CTA was replaced by the closing CTA.</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+    </div>
+
+    <div class="wrap">
+      <section aria-labelledby="opp-title">
+        <p class="eyebrow">Round 2 · beyond parity</p>
+        <h2 id="opp-title" style="margin-bottom:.6rem">Six opportunities applied</h2>
+        <p class="muted" style="max-width:72ch;margin-bottom:1.4rem">Prompted by standards in the library that the first pass didn’t yet use. The after pane above now reflects all of these, plus visual parity with the original (hero graphic, partner logos, and the interactive ROI calculator mid-page), a soft “Learn More” hero CTA that anchors to the client logos, and a single hard “Request a Meeting” CTA at the foot of the page.</p>
+        <div class="domains">
+          <div class="dcard"><div class="dhead"><span class="dnum">O1</span><h3>Compliant consent</h3></div><ul>
+            <li><b>Reject all</b> is now exactly as prominent as Accept all — fixes the live site’s dark-pattern asymmetry.</li>
+            <li>Analytics/marketing default <b>off</b> (opt-in, no pre-ticking); neutral decline wording.</li>
+            <li>Grounded in <b>gdpr</b>, <b>eprivacy</b>, <b>deceptive-patterns</b> (Obstruction / Preselection / Confirmshaming).</li>
+          </ul></div>
+          <div class="dcard"><div class="dhead"><span class="dnum">O2</span><h3>GEO / answer-engine</h3></div><ul>
+            <li><b>Speakable</b> schema marks the hero + how-it-works answers for voice/AI surfacing.</li>
+            <li>Benchmarks now <b>cite their source</b>; stats kept liftable and attributed.</li>
+            <li>Grounded in <b>geo-tactics</b> + <b>google-rich-results/Speakable</b>.</li>
+          </ul></div>
+          <div class="dcard"><div class="dhead"><span class="dnum">O3</span><h3>Expanded structured data</h3></div><ul>
+            <li>Added <b>ContactPoint</b>, <b>Service</b>, <b>Offer</b>, <b>SearchAction</b>, <b>ImageObject</b> to the graph.</li>
+            <li>Eligible for the Organization rich result + a sitelinks search box.</li>
+            <li>Grounded in five more <b>schema.org</b> types.</li>
+          </ul></div>
+          <div class="dcard"><div class="dhead"><span class="dnum">O4</span><h3>Accessibility statement / VPAT</h3></div><ul>
+            <li>New <b>accessibility.html</b> — WCAG 2.2 AA + EN 301 549 conformance, VPAT-style table.</li>
+            <li>Linked from the footer; enterprise-procurement ready.</li>
+            <li>Grounded in <b>vpat</b>, <b>en-301-549</b>, <b>section-508</b>.</li>
+          </ul></div>
+          <div class="dcard"><div class="dhead"><span class="dnum">O5</span><h3>Content provenance</h3></div><ul>
+            <li>Hero graphic modelled as <b>ImageObject</b> with IPTC creator / credit / copyright / caption.</li>
+            <li>Documents where a <b>C2PA</b> Content Credentials manifest is embedded at export.</li>
+            <li>Grounded in <b>c2pa</b> + <b>iptc-photo-metadata</b>.</li>
+          </ul></div>
+          <div class="dcard"><div class="dhead"><span class="dnum">O6</span><h3>INP / Lighthouse / readability</h3></div><ul>
+            <li>Interaction handlers use <b>passive listeners</b>, avoid layout thrash (INP).</li>
+            <li>One small inline script — no framework/unused JS to flag.</li>
+            <li>Grounded in <b>core-web-vitals/INP</b>, <b>lighthouse</b>, <b>readability-formulas</b>.</li>
+          </ul></div>
+        </div>
+      </section>
+    </div>
+
+    <!--STD_START-->
+    <div class="wrap">
+      <section aria-labelledby="std-title">
+        <p class="eyebrow">Provenance</p>
+        <h2 id="std-title" style="margin-bottom:.6rem">Library standards referenced</h2>
+        <p class="muted" style="max-width:72ch;margin-bottom:1.2rem">Every improvement is grounded in a defined object in the standards library — <b>95 files</b> across 15 groups, each with why it applied and its full text reproduced verbatim. The full appendix lives on its own page to keep this review light.</p>
+        <a class="btn-appendix" href="standards.html">Open the standards appendix (95 files) &rarr;</a>
+        <nav class="toc-preview" aria-label="Standards groups"><a href="standards.html#1-semantic-web-structured-data-schema-org">1 · Semantic Web &amp; Structured Data — Schema.org <b>9</b></a><a href="standards.html#2-web-platform-semantic-html-html-elements">2 · Web Platform — Semantic HTML (html-elements) <b>7</b></a><a href="standards.html#2-web-platform-css-interoperable-baseline">2 · Web Platform — CSS &amp; interoperable baseline <b>9</b></a><a href="standards.html#3-accessibility-wcag-2-2-success-criteria">3 · Accessibility — WCAG 2.2 success criteria <b>13</b></a><a href="standards.html#3-accessibility-wai-aria-roles-apg-pattern">3 · Accessibility — WAI-ARIA (roles &amp; APG pattern) <b>5</b></a><a href="standards.html#4-performance-core-web-vitals">4 · Performance — Core Web Vitals <b>3</b></a><a href="standards.html#5-search-seo-geo">5 · Search, SEO &amp; GEO <b>13</b></a><a href="standards.html#6-design-systems-ux">6 · Design Systems &amp; UX <b>6</b></a><a href="standards.html#7-content-editorial">7 · Content &amp; Editorial <b>2</b></a><a href="standards.html#o1-consent-privacy-ethical-design">O1 · Consent, privacy &amp; ethical design <b>6</b></a><a href="standards.html#o2-geo-answer-engine-optimization">O2 · GEO / answer-engine optimization <b>5</b></a><a href="standards.html#o3-expanded-structured-data">O3 · Expanded structured data <b>5</b></a><a href="standards.html#o4-accessibility-conformance-vpat">O4 · Accessibility conformance (VPAT) <b>3</b></a><a href="standards.html#o5-content-provenance-on-media">O5 · Content provenance on media <b>6</b></a><a href="standards.html#o6-inp-lighthouse-readability">O6 · INP, Lighthouse &amp; readability <b>3</b></a></nav>
+      </section>
+    </div>
+<!--STD_END-->
+  </main>
+
+  <footer class="hub">
+    <div class="wrap foot">
+      <span>datascalehr homepage review · same content, rebuilt against the standards library (10 quality domains)</span>
+      <span>Served locally for review</span>
+    </div>
+  </footer>
+
+  <script>
+    (function(){
+      var frames=document.getElementById('frames');
+      var fb=document.getElementById('f-before'), fa=document.getElementById('f-after');
+      var btns=document.querySelectorAll('.segmented button[data-view]');
+      function set(view){
+        btns.forEach(function(b){b.setAttribute('aria-pressed', String(b.dataset.view===view));});
+        frames.classList.toggle('solo', view!=='split');
+        fb.classList.toggle('hidden', view==='after');
+        fa.classList.toggle('hidden', view==='before');
+      }
+      btns.forEach(function(b){ b.addEventListener('click', function(){ set(b.dataset.view); }); });
+
+      // ---- Theme control for the improved-site pane ----
+      var themeBtns=document.querySelectorAll('.segmented button[data-theme]');
+      var afterFrame=document.querySelector('#f-after iframe');
+      var current='auto';
+      function applyAfterTheme(t){
+        try{
+          var doc=afterFrame.contentDocument, win=afterFrame.contentWindow;
+          if(!doc) return;
+          if(t==='auto'){ doc.documentElement.removeAttribute('data-theme'); try{win.localStorage.removeItem('dshr-theme');}catch(e){} }
+          else{ doc.documentElement.setAttribute('data-theme',t); try{win.localStorage.setItem('dshr-theme',t);}catch(e){} }
+        }catch(e){}
+      }
+      themeBtns.forEach(function(b){
+        b.addEventListener('click',function(){
+          current=b.dataset.theme;
+          themeBtns.forEach(function(x){x.setAttribute('aria-pressed', String(x===b));});
+          applyAfterTheme(current);
+        });
+      });
+      // re-assert the chosen theme whenever the improved-site iframe (re)loads
+      if(afterFrame) afterFrame.addEventListener('load',function(){ if(current!=='auto') applyAfterTheme(current); });
+    })();
+  </script>
+</body>
+</html>
